@@ -15,7 +15,7 @@ namespace R2B0app
 			Master = new MasterPage ();
 			Detail = Global.DetailPage;
 
-			//this.Padding = new Thickness(0, 0, 0, 0);
+			this.Padding = new Thickness(0, 0, 0, 0);
 		}
 	}
 }
