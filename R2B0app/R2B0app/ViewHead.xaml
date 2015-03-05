@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewHead" 
+xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
+	<ContentView.Content>
+	<StackLayout Orientation="Horizontal">
+		<Image Source="{local:ImageResource R2B0app.images.logoIA32.png}" WidthRequest="96" HeightRequest="32" Aspect="Fill" />
+		<Label Text="Hello Head" />
+	</StackLayout>
+	</ContentView.Content>
+</ContentView>
