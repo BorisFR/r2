@@ -40,8 +40,9 @@ namespace R2B0app
 //			this.Content = grid;
 
 			viewHead.Content = new ViewHead ();
-            viewLeft.Content = new ViewMain();
-		}
+            viewLeft.Content = new ViewMain(Screen.Holos);
+            viewRight.Content = new ViewMain(Screen.Logics);
+        }
 
 	}
 }

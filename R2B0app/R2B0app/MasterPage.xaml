@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.MasterPage" 
-Title="Master">
+Title="Master" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentPage.Content>
-		<ScrollView BackgroundColor="Lime">
-			<Label Text="Hello master" />
+		<ScrollView BackgroundColor="{local:BGResource Background}">
+			<Label Text="Hello master" TextColor="{local:TextResource TEXT}" />
 		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>

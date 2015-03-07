@@ -1,19 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.DetailPage" 
-Title="Detail">
+Title="Detail" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentPage.Content>
-		<Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="White" ColumnSpacing="0" RowSpacing="0">
+		<Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Black" ColumnSpacing="0" RowSpacing="0">
 			<Grid.RowDefinitions>
 		      <RowDefinition Height="32" />
 		      <RowDefinition Height="*" />
-		    </Grid.RowDefinitions>
-		    <Grid.ColumnDefinitions>
+	    </Grid.RowDefinitions>
+	    <Grid.ColumnDefinitions>
 		      <ColumnDefinition Width="*" />
 		      <ColumnDefinition Width="*" />
-		    </Grid.ColumnDefinitions>
-		    <ContentView x:Name="viewHead" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" Grid.ColumnSpan="2" />
-		    <ContentView x:Name="viewLeft" Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" />
-		    <ContentView x:Name="viewRight" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" />
-    	</Grid>
-	</ContentPage.Content>
+	    </Grid.ColumnDefinitions>
+      <Image Source="{local:ImageResource R2B0app.images.bg.png}" WidthRequest="1920" HeightRequest="1080" Aspect="Fill" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+      <ContentView x:Name="viewHead" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" Grid.ColumnSpan="2" />
+	    <ContentView x:Name="viewLeft" Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" />
+	    <ContentView x:Name="viewRight" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" />
+    </Grid>
+  </ContentPage.Content>
 </ContentPage>
