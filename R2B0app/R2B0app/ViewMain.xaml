@@ -5,31 +5,31 @@
              xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
   <Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" ColumnSpacing="0" RowSpacing="0">
     <Grid.RowDefinitions>
-      <RowDefinition Height="8" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="64" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="16" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="4" />
+      <RowDefinition Height="2" /> <!-- spacer -->
+      <RowDefinition Height="2" />
+      <RowDefinition Height="2" />
+      <RowDefinition Height="58" />
+      <RowDefinition Height="2" />
+      <RowDefinition Height="2" />
+      <RowDefinition Height="2" />  <!-- spacer -->
+      <RowDefinition Height="2" />
+      <RowDefinition Height="2" />
       <RowDefinition Height="*" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="4" />
-      <RowDefinition Height="8" />
+      <RowDefinition Height="2" />
+      <RowDefinition Height="2" />
+      <RowDefinition Height="2" /> <!-- spacer -->
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="48" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="36" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="2" />
       <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="2" />
+      <ColumnDefinition Width="2" />
     </Grid.ColumnDefinitions>
 
     <BoxView Color="{local:ColorResource FillBorder}" Grid.Row="2" Grid.Column="5" Grid.RowSpan="3" Grid.ColumnSpan="3" />
@@ -38,17 +38,17 @@
     <BoxView Color="{local:ColorResource Fill}" Grid.Row="3" Grid.Column="6" />
     <BoxView Color="{local:ColorResource Fill}" Grid.Row="9" Grid.Column="6" />
 -->
-    <BoxView Color="{local:ColorResource Border}" WidthRequest="4" Grid.Row="1" Grid.Column="2" Grid.RowSpan="5" />
+    <BoxView Color="{local:ColorResource Border}" WidthRequest="2" Grid.Row="1" Grid.Column="2" Grid.RowSpan="5" />
 
-    <BoxView Color="{local:ColorResource Border}" HeightRequest="4" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" />
-    <BoxView Color="{local:ColorResource Border}" WidthRequest="4" Grid.Row="2" Grid.Column="4" Grid.RowSpan="3" />
-    <BoxView Color="{local:ColorResource Border}" WidthRequest="4" Grid.Row="2" Grid.Column="8" Grid.RowSpan="3" />
-    <BoxView Color="{local:ColorResource Border}" HeightRequest="4" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="5" />
+    <BoxView Color="{local:ColorResource Border}" HeightRequest="2" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="5" />
+    <BoxView Color="{local:ColorResource Border}" WidthRequest="2" Grid.Row="2" Grid.Column="4" Grid.RowSpan="3" />
+    <BoxView Color="{local:ColorResource Border}" WidthRequest="2" Grid.Row="2" Grid.Column="8" Grid.RowSpan="3" />
+    <BoxView Color="{local:ColorResource Border}" HeightRequest="2" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="5" />
 
-    <BoxView Color="{local:ColorResource Border}" HeightRequest="4" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="5" />
-    <BoxView Color="{local:ColorResource Border}" WidthRequest="4" Grid.Row="8" Grid.Column="4" Grid.RowSpan="3" />
-    <BoxView Color="{local:ColorResource Border}" WidthRequest="4" Grid.Row="8" Grid.Column="8" Grid.RowSpan="3" />
-    <BoxView Color="{local:ColorResource Border}" HeightRequest="4" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="5" />
+    <BoxView Color="{local:ColorResource Border}" HeightRequest="2" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="5" />
+    <BoxView Color="{local:ColorResource Border}" WidthRequest="2" Grid.Row="8" Grid.Column="4" Grid.RowSpan="3" />
+    <BoxView Color="{local:ColorResource Border}" WidthRequest="2" Grid.Row="8" Grid.Column="8" Grid.RowSpan="3" />
+    <BoxView Color="{local:ColorResource Border}" HeightRequest="2" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="5" />
 
     <Label x:Name="lBigCommand" Text="SELECT HOLOPROJECTORS :" TextColor="{local:TextResource Text}" Grid.Row="3" Grid.Column="6" FontAttributes="Italic" FontSize="12" />
     <ContentView x:Name="viewKeyboard" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="6" />

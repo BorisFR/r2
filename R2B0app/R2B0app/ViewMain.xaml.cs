@@ -10,7 +10,7 @@ namespace R2B0app
 {
     public partial class ViewMain : ContentView
     {
-        private Screen screen = Screen.Main;
+        private Screen screen;
 
         public ViewMain( Screen screen)
         {

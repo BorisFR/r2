@@ -11,6 +11,7 @@ namespace R2B0app
     {
         public App()
         {
+			Global.DoInit ();
 			MainPage = new MainPage ();
             // The root page of your application
 //            MainPage = new ContentPage
@@ -31,6 +32,7 @@ namespace R2B0app
         protected override void OnStart()
         {
             // Handle when your app starts
+			Global.DoInit ();
         }
 
         protected override void OnSleep()

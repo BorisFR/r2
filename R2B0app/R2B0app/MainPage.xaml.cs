@@ -15,6 +15,8 @@ namespace R2B0app
 			Master = new MasterPage ();
 			Detail = Global.DetailPage;
 
+			this.MasterBehavior = MasterBehavior.Popover;
+
 			this.Padding = new Thickness(0, 0, 0, 0);
 		}
 	}
