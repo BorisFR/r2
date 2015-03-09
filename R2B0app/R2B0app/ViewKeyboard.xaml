@@ -18,14 +18,10 @@
       <RowDefinition Height="4" />
       <RowDefinition Height="*" />
       <RowDefinition Height="4" />
-      <RowDefinition Height="4" />
+      <RowDefinition Height="0" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="*" />
-      <ColumnDefinition Width="4" />
-      <ColumnDefinition Width="4" />
+      <ColumnDefinition Width="0" />
       <ColumnDefinition Width="4" />
       <ColumnDefinition Width="*" />
       <ColumnDefinition Width="4" />
@@ -34,6 +30,10 @@
       <ColumnDefinition Width="*" />
       <ColumnDefinition Width="4" />
       <ColumnDefinition Width="4" />
+      <ColumnDefinition Width="4" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="4" />
+      <ColumnDefinition Width="0" />
     </Grid.ColumnDefinitions>
 
     <BoxView Color="{local:ColorResource FillBorder}" Grid.Row="2" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="3" />

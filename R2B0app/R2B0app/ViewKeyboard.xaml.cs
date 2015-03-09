@@ -35,14 +35,14 @@ namespace R2B0app
 
             for (int i = 0; i < 9; i++)
             {
-                AddButton(2 + 4 * (i % 3), 3 + 4 * (i / 3), "KILL SERVOS", "");
+				AddButton(2 + 4 * (i % 3), 3 + 4 * (i / 3), "KILL\nSERVOS", "");
             }
         }
 
         private void AddButton(int x, int y, string text, string command)
         {
-            theGrid.Children.Add(new Label { Text = text, TextColor = ThemeColors.GetColor("TEXT"), FontSize = 18, HorizontalOptions = LayoutOptions.Center, VerticalOptions=LayoutOptions.Center }, x, y);
-            //theGrid.Children.Add(new Button { Text = text, TextColor = ThemeColors.GetColor("TEXT"), BackgroundColor = ThemeColors.GetColor("FILL"), BorderColor = ThemeColors.GetColor("TEXT"), BorderWidth = 1, FontSize = 12, HorizontalOptions = LayoutOptions.Fill, VerticalOptions = LayoutOptions.FillAndExpand }, x, y);
+            //theGrid.Children.Add(new Label { Text = text, TextColor = ThemeColors.GetColor("TEXT"), FontSize = 10, HorizontalOptions = LayoutOptions.Center, VerticalOptions=LayoutOptions.Center }, x, y);
+			theGrid.Children.Add(new MyButton { Text = text, TextColor = ThemeColors.GetColor("TEXT"), BackgroundColor = Color.Transparent, BorderColor = ThemeColors.GetColor("TEXT"), BorderWidth = 1, FontSize = 10, HorizontalOptions = LayoutOptions.Fill, VerticalOptions = LayoutOptions.FillAndExpand }, x, y);
         } 
 
     }
