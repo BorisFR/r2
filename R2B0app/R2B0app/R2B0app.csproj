@@ -136,7 +136,8 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="CustomRenderer\" />
+    <Content Include="notes.txt" />
   </ItemGroup>
 </Project>

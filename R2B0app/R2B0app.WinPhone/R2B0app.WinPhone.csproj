@@ -119,7 +119,7 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="CustomRenderer\MyButtonRenderer.cs" />
+    <Compile Include="CustomRenderer\MyButtonRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README_FIRST.txt" />
@@ -196,7 +196,5 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.4.0.6336-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.4.0.6336-pre1\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
   </Target>
-  <ItemGroup>
-    <Folder Include="CustomRenderer\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
