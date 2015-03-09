@@ -31,7 +31,7 @@ namespace R2B0app
 				devicesName.Add ("ipadhd", "iPad Retina");
 				devicesName.Add ("android", "Android");
 				devicesName.Add ("wp", "Windows Phone");
-				CurrentDevice = "ip4s";
+				CurrentDevice = "wp";
 				isInit = true;
 			}
 		}

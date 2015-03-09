@@ -1,4 +1,11 @@
-﻿L'entreprise Industrial Automaton se trouve dans la ville Rordis.
+﻿https://github.com/jamesmontemagno/Xamarin.Plugins
+https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery
+https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/DeviceInfo
+https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Settings
+
+
+
+L'entreprise Industrial Automaton se trouve dans la ville Rordis.
 Rordis City, ville majeur de Nubia.
 Nubia se situe dans le Système Nubus, composé de 5 planetes.
 Ce système est situé dans le Secteur Corellian.

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DeviceInfo.Plugin;
+using System;
 using System.Collections.Generic;
 
 namespace R2B0app
@@ -43,17 +44,30 @@ namespace R2B0app
 				case "android":
 					textSize = new double[]{16,8};
 					break;
-				default:
+                case "wp":
+                    textSize = new double[] { 22, 14 };
+                    break;
+                default:
 					textSize = new double[]{18,10};
 					break;
 				}
 				PanelsButtons = new Dictionary<Screen, string[]> ();
-				PanelsButtons.Add (Screen.Main, 
-					new string[] { "CLOSE ALL", "OPEN ALL", "SMIRK WAVE", 
-						"LEIA", "CANTINA", "BEEP CANTINA",
-						"HOLOS ON", "HOLOS OFF", "TOP RC",
-						"SCREAM", "SCREAM No Pan", ">>"
+				PanelsButtons.Add (Screen.Main,
+                    new string[] { "CLOSE\nALL", "OPEN\nALL", "SMIRK\nWAVE", 
+						"LEIA", "CANTINA", "BEEP\nCANTINA",
+						"HOLOS\nON", "HOLOS\nOFF", "TOP RC",
+						"SCREAM", "SCREAM\nNo Pan", ">>"
 					});
+
+                PanelsButtons[Screen.Main][0] = CrossDeviceInfo.Current.Platform.ToString();
+                PanelsButtons[Screen.Main][1] = CrossDeviceInfo.Current.Model;
+                PanelsButtons[Screen.Main][2] = CrossDeviceInfo.Current.Version;
+                System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Platform.ToString());
+                System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Model);
+                System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Version);
+
+                //CrossVibrate.Current;
+
 				isInit = true;
 			}
 		}
