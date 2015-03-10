@@ -11,6 +11,7 @@ namespace R2B0app
 		private static object toLock = new object();
 		private static double[] textSize;
 		public static Dictionary<Screen, string[]> PanelsButtons;
+		public static Dictionary<Screen, string[]> PanelsCommands;
 
 		public static void DoInit ()
 		{
@@ -62,7 +63,22 @@ namespace R2B0app
                     new string[] { "CLOSE\nALL", "OPEN\nALL", "SMIRK\nWAVE", 
 						"LEIA", "CANTINA", "BEEP\nCANTINA",
 						"HOLOS\nON", "HOLOS\nOFF", "TOP RC",
-						"SCREAM", "SCREAM\nNo Pan", ">>"
+						"SCREAM", "SCREAM\nNo Pan", ">>",
+						"PAGE 2", "", "",
+						"", "", "",
+						"", "", "",
+						"<<", "", ""
+					});
+				PanelsCommands = new Dictionary<Screen, string[]> ();
+				PanelsCommands.Add (Screen.Main,
+					new string[] {"", "", "",
+						"", "", "",
+						"", "", "",
+						"", "", ">>",
+						"", "", "",
+						"", "", "",
+						"", "", "",
+						"<<", "", ""
 					});
 
                 PanelsButtons[Screen.Main][0] = CrossDeviceInfo.Current.Platform.ToString();

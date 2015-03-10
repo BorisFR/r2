@@ -70,16 +70,6 @@ namespace R2B0app
 			case DeviceInfo.Plugin.Abstractions.Platform.Android:
 				CurrentDevice = "android";
 				break;
-			case DeviceInfo.Plugin.Abstractions.Platform.WindowsPhone:
-				CurrentDevice = "wp";
-                if ((width == 480 && height == 728) || (width == 728 && height == 480))
-					CurrentDevice = "wpwvga"; // Wide VGA and also WXGA
-                else if ((width == 480 && height == 781) || (width == 781 && height == 480))
-					CurrentDevice = "wphdr"; // HD Ready - 720p and also Full HD 1080p
-				break;
-			case DeviceInfo.Plugin.Abstractions.Platform.Windows:
-				CurrentDevice = "win";
-				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.iOS:
 				if ((width == 320 && height == 480) || (width == 480 && height == 320))
 					CurrentDevice = "ip4s";
@@ -91,6 +81,16 @@ namespace R2B0app
 					CurrentDevice = "ip6p";
 				else if ((width == 768 && height == 1024) || (width == 1024 && height == 768))
 					CurrentDevice = "ipad2"; // or Retina or Air
+				break;
+			case DeviceInfo.Plugin.Abstractions.Platform.WindowsPhone:
+				CurrentDevice = "wp";
+                if ((width == 480 && height == 728) || (width == 728 && height == 480))
+					CurrentDevice = "wpwvga"; // Wide VGA and also WXGA
+                else if ((width == 480 && height == 781) || (width == 781 && height == 480))
+					CurrentDevice = "wphdr"; // HD Ready - 720p and also Full HD 1080p
+				break;
+			case DeviceInfo.Plugin.Abstractions.Platform.Windows:
+				CurrentDevice = "win";
 				break;
 			default:
 				break;
