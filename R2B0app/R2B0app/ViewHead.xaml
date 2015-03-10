@@ -3,7 +3,7 @@
 xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentView.Content>
 	<StackLayout Orientation="Horizontal">
-		<Image Source="{local:ImageResource R2B0app.images.logoIA32.png}" WidthRequest="96" HeightRequest="32" Aspect="Fill" />
+		<Image Source="{local:ImageResource logoIA32.png}" WidthRequest="96" HeightRequest="32" Aspect="Fill" />
 		<Label Text="Hello Head" />
 	</StackLayout>
 	</ContentView.Content>

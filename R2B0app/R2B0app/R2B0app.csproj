@@ -17,6 +17,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>50fa3b88</NuGetPackageImportStamp>
+    <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -140,18 +141,16 @@
     <EmbeddedResource Include="PageStart.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="images\logoIA16.png" />
     <EmbeddedResource Include="ViewHead.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <LogicalName>ViewHead.xaml</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="images\logoIA32.png" />
-    <EmbeddedResource Include="images\menu_home.png" />
-    <EmbeddedResource Include="images\menu_info.png" />
-    <EmbeddedResource Include="images\menu_menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="images\bg.png" />
+    <EmbeddedResource Include="Images\logoIA16.png" />
+    <EmbeddedResource Include="Images\logoIA32.png" />
+    <EmbeddedResource Include="Images\menu_home.png" />
+    <EmbeddedResource Include="Images\menu_info.png" />
+    <EmbeddedResource Include="Images\menu_menu.png" />
+    <EmbeddedResource Include="Images\bg.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ViewMain.xaml">

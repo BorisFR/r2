@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>R2B0app.Droid</RootNamespace>
-    <AssemblyName>R2B0app.Droid</AssemblyName>
+    <AssemblyName>R2B0app.droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -23,6 +23,7 @@
     <JavaOptions />
     <NuGetPackageImportStamp>77dfdf71</NuGetPackageImportStamp>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,12 +113,6 @@
     <Content Include="Properties\AndroidManifest.xml" />
     <Content Include="Properties\_SettingsStarted.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\R2B0app\R2B0app.csproj">
-      <Name>R2B0app</Name>
-      <Project>{6AD2BB1C-BB7E-4078-8BD2-B2AB2CD22A59}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.3.5.6337\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.3.5.6337\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -134,4 +129,10 @@
   </Target>
   -->
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\R2B0app\R2B0app.csproj">
+      <Project>{6AD2BB1C-BB7E-4078-8BD2-B2AB2CD22A59}</Project>
+      <Name>R2B0app</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

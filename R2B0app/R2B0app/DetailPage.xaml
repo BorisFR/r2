@@ -11,7 +11,7 @@ Title="Detail" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 		      <ColumnDefinition Width="50*" />
 		      <ColumnDefinition Width="50*" />
 	    	</Grid.ColumnDefinitions>
-			<Image Source="{local:ImageResource R2B0app.images.bg.png}" WidthRequest="1920" HeightRequest="1080" Aspect="Fill" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+			<Image Source="{local:ImageResource bg.png}" WidthRequest="1920" HeightRequest="1080" Aspect="Fill" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" />
       		<ContentView x:Name="viewHead" Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" Grid.ColumnSpan="2" />
 	    	<ContentView x:Name="viewLeft" Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" />
 	    	<ContentView x:Name="viewRight" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent" />

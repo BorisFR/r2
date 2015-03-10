@@ -1,6 +1,7 @@
-﻿using System;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms.Xaml;
+using System;
 using Xamarin.Forms;
+
 
 namespace R2B0app
 {
@@ -14,7 +15,7 @@ namespace R2B0app
 		{
 			if (Source == null)
 				return null;
-			var imageSource = ImageSource.FromResource(Source);
+			var imageSource = ImageSource.FromResource("R2B0app.Images." + Source);
 			return imageSource;
 		}
 

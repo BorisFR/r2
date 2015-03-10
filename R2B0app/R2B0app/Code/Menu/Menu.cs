@@ -38,7 +38,7 @@ namespace R2B0app
 				if (Icon.Length == 0) {
 					return null;
 				}
-				return ImageSource.FromResource(string.Format("R2B0app.images.menu_{0}.png",Icon)); 
+				return ImageSource.FromResource(string.Format("R2B0app.Images.menu_{0}.png",Icon)); 
 			}
 		}
 
