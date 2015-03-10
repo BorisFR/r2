@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace R2B0app
@@ -18,6 +17,21 @@ namespace R2B0app
 			this.MasterBehavior = MasterBehavior.Popover;
 
 			this.Padding = new Thickness(0, 0, 0, 0);
+
+			if (Device.OS != TargetPlatform.iOS)
+			{
+				if (Device.OS != TargetPlatform.WinPhone)
+				{
+					TapGestureRecognizer tap = new TapGestureRecognizer();
+					tap.Tapped += (sender, args) =>
+					{
+						this.IsPresented = true;
+					};
+
+					Global.DetailPage.AddGesture(tap);
+				}
+			}
 		}
+
 	}
 }

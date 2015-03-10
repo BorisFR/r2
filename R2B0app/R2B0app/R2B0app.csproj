@@ -73,6 +73,9 @@
     </Compile>
     <Compile Include="CustomRenderer\MyButton.cs" />
     <Compile Include="Code\Settings.cs" />
+    <Compile Include="Code\Menu\Menu.cs" />
+    <Compile Include="Code\Menu\MenuGroup.cs" />
+    <Compile Include="Code\Menu\MenuManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.1.3.5.6337\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.1.3.5.6337\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -143,6 +146,9 @@
       <LogicalName>ViewHead.xaml</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="images\logoIA32.png" />
+    <EmbeddedResource Include="images\menu_home.png" />
+    <EmbeddedResource Include="images\menu_info.png" />
+    <EmbeddedResource Include="images\menu_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="images\bg.png" />
@@ -163,5 +169,8 @@
   <ItemGroup>
     <Content Include="DeviceInfoReadme.txt" />
     <Content Include="notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Code\Menu\" />
   </ItemGroup>
 </Project>

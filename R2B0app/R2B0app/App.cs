@@ -12,21 +12,9 @@ namespace R2B0app
         public App()
         {
 			Global.DoInit ();
-			MainPage = new MainPage ();
-            // The root page of your application
-//            MainPage = new ContentPage
-//            {
-//                Content = new StackLayout
-//                {
-//                    VerticalOptions = LayoutOptions.Center,
-//                    Children = {
-//						new Label {
-//							XAlign = TextAlignment.Center,
-//							Text = "Welcome to Xamarin Forms!"
-//						}
-//					}
-//                }
-//            };
+			Global.MainPage = new MainPage ();
+
+			MainPage = Global.MainPage;
         }
 
         protected override void OnStart()

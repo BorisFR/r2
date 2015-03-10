@@ -3,7 +3,23 @@
 Title="Master" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentPage.Content>
 		<ScrollView BackgroundColor="{local:BGResource Background}">
-			<Label Text="Hello master" TextColor="{local:TextResource TEXT}" />
+			<StackLayout Orientation="Vertical" BackgroundColor="{local:BGResource FillBorder}">
+				<Label Text="R2-B0" Font="Bold,Medium" HorizontalOptions="Center" TextColor="{local:TextResource TEXT}" />
+				<ListView x:Name="theList" IsGroupingEnabled="true" BackgroundColor="{local:BGResource Fill}">
+		        <ListView.GroupHeaderTemplate>
+		        <DataTemplate>
+		        	<ViewCell>
+		        		<Label Text="{Binding Title}" HorizontalOptions="LayoutOptions.Center" TextColor="{local:TextResource TEXT}"/>
+		        	</ViewCell>
+		        </DataTemplate>
+		        </ListView.GroupHeaderTemplate>
+		        <ListView.ItemTemplate>
+		        <DataTemplate>
+		        	<ImageCell Text="{Binding Title}" Detail="{Binding Detail}" ImageSource="{Binding Image}" TextColor="{local:TextResource TEXT}" />
+		        </DataTemplate>
+		        </ListView.ItemTemplate>
+		        </ListView>
+			</StackLayout>
 		</ScrollView>
 	</ContentPage.Content>
 </ContentPage>

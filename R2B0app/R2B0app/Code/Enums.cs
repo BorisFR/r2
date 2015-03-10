@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace R2B0app
 {
+	public enum MyPage {
+		None,
+		SplashScreen,
+		About,
+		Home,
+		Settings,
+		Main
+	}
+
     public enum Screen
     {
         Holos,
