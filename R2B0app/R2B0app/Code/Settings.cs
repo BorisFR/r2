@@ -47,6 +47,12 @@ namespace R2B0app
                 case "wp":
                     textSize = new double[] { 22, 14 };
                     break;
+                case "wpwvga":
+                    textSize = new double[] { 24, 16 };
+                    break;
+                case "wphdr":
+                    textSize = new double[] { 26, 18 };
+                    break;
                 default:
 					textSize = new double[]{18,10};
 					break;
