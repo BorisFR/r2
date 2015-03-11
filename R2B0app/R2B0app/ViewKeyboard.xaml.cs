@@ -19,21 +19,7 @@ namespace R2B0app
             InitializeComponent();
 
             this.screen = screen;
-            switch (screen)
-            {
-                case Screen.Main:
-                    lTitle.Text = "MAIN CONTROL 1";
-                    break;
-                case Screen.Holos:
-                    lTitle.Text = "HOLOS CONTROL 1";
-                    break;
-                case Screen.Logics:
-                    lTitle.Text = "LOGICS CONTROL 1";
-                    break;
-                case Screen.Panel:
-                    lTitle.Text = "PANEL CONTROL 1";
-                    break;
-            }
+			lTitle.Text = string.Format("{0} CONTROL 1", Settings.PanelsTitle[screen]);
 			lTitle.FontSize = Settings.TextSizeForKeyboardTitle;
 
 			this.screen = Screen.Main;
@@ -43,22 +29,19 @@ namespace R2B0app
             }
         }
 
+		private List<Button> buttons = new List<Button>();
+		private int index = 0;
+
 		private void SetButtonsText() {
-			Device.BeginInvokeOnMainThread (() => {
-				int i = 0;
-				foreach (View v in theGrid.Children) {
-					if (v.GetType ().Equals (typeof(MyButton))) {
-						MyButton b = v as MyButton;
-						try {
-							b.Text = Settings.PanelsButtons [screen] [i + (pageNumber * 12)];
-							b.CommandParameter = Settings.PanelsCommands [screen] [i + (pageNumber * 12)];
-						} catch (Exception err) {
-							System.Diagnostics.Debug.WriteLine (err.Message);
-						}
-						i++;
-					}
+			//Device.BeginInvokeOnMainThread (() => {
+			lTitle.Text = string.Format("{0} CONTROL {1}", Settings.PanelsTitle[screen], pageNumber + 1);
+				index = pageNumber * 12;
+				foreach (Button bt in buttons) {
+					bt.Text = Settings.PanelsButtons [screen] [index];
+					bt.CommandParameter = Settings.PanelsCommands [screen] [index];
+					index++;
 				}
-			});
+			//});
 		}
 
         private void AddButton(int x, int y, string text, string command)
@@ -77,6 +60,7 @@ namespace R2B0app
 			b.CommandParameter = command;
 			b.Clicked += HandleClicked;
 			theGrid.Children.Add(b, x, y);
+			buttons.Add (b);
         }
 
 		bool animInProgress = false;
@@ -88,19 +72,27 @@ namespace R2B0app
 			animInProgress = true;
 			MyButton b = sender as MyButton;
 			if (b.CommandParameter.Equals ("<<")) {
+				foreach(Button bt in buttons)
+					bt.FadeTo(0,200,null);
 				await theGrid.RotateYTo (-90, 200, Easing.SinIn);
 				pageNumber--;
-				//SetButtonsText ();
+				SetButtonsText ();
+				foreach(Button bt in buttons)
+					bt.FadeTo(1,200,null);
 				await theGrid.RotateYTo (-360, 600, Easing.BounceOut);
 				await theGrid.RotateYTo (0, 0, null);
-				SetButtonsText ();
+				//SetButtonsText ();
 			} else if (b.CommandParameter.Equals (">>")) {
+				foreach(Button bt in buttons)
+					bt.FadeTo(0,200,null);
 				await theGrid.RotateYTo (90, 200, Easing.SinIn);
 				pageNumber++;
-				//SetButtonsText ();
+				SetButtonsText ();
+				foreach(Button bt in buttons)
+					bt.FadeTo(1,200,null);
 				await theGrid.RotateYTo (360, 600, Easing.BounceOut);
 				await theGrid.RotateYTo (0, 0, null);
-				SetButtonsText ();
+				//SetButtonsText ();
 			} else {
 				await b.ScaleTo (0, 100, Easing.SinIn);
 				await b.ScaleTo (1, 100, Easing.SpringOut);

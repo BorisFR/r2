@@ -65,31 +65,30 @@ namespace R2B0app
             }
 		}
 
-		public static void RefreshDevice(double width, double height) {
-			System.Diagnostics.Debug.WriteLine (width.ToString () + "x" + height.ToString());
+		public static void RefreshDevice() {
+			System.Diagnostics.Debug.WriteLine (App.ScreenWidth.ToString () + "x" + App.ScreenHeight.ToString());
 			switch (CrossDeviceInfo.Current.Platform) {
 			case DeviceInfo.Plugin.Abstractions.Platform.Android:
-				if ((width == 1024 && height == 471) || (width == 471 && height == 1024))
+				if ((App.ScreenWidth == 1024 && App.ScreenHeight == 552) || (App.ScreenWidth == 471 && App.ScreenHeight == 552))
 					CurrentDevice = "androidwsvga";
-				System.Diagnostics.Debug.WriteLine ("*** DEVICE OK");
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.iOS:
-				if ((width == 320 && height == 480) || (width == 480 && height == 320))
+				if ((App.ScreenWidth == 320 && App.ScreenHeight == 480) || (App.ScreenWidth == 480 && App.ScreenHeight == 320))
 					CurrentDevice = "ip4s";
-				else if ((width == 320 && height == 568) || (width == 568 && height == 320))
+				else if ((App.ScreenWidth == 320 && App.ScreenHeight == 568) || (App.ScreenWidth == 568 && App.ScreenHeight == 320))
 					CurrentDevice = "ip5"; // or 5s...
-				else if ((width == 375 && height == 667) || (width == 667 && height == 375))
+				else if ((App.ScreenWidth == 375 && App.ScreenHeight == 667) || (App.ScreenWidth == 667 && App.ScreenHeight == 375))
 					CurrentDevice = "ip6";
-				else if ((width == 414 && height == 736) || (width == 736 && height == 414))
+				else if ((App.ScreenWidth == 414 && App.ScreenHeight == 736) || (App.ScreenWidth == 736 && App.ScreenHeight == 414))
 					CurrentDevice = "ip6p";
-				else if ((width == 768 && height == 1024) || (width == 1024 && height == 768))
+				else if ((App.ScreenWidth == 768 && App.ScreenHeight == 1024) || (App.ScreenWidth == 1024 && App.ScreenHeight == 768))
 					CurrentDevice = "ipad2"; // or Retina or Air
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.WindowsPhone:
 				CurrentDevice = "wp";
-                if ((width == 480 && height == 728) || (width == 728 && height == 480))
+				if ((App.ScreenWidth == 480 && App.ScreenHeight == 728) || (App.ScreenWidth == 728 && App.ScreenHeight == 480))
 					CurrentDevice = "wpwvga"; // Wide VGA and also WXGA
-                else if ((width == 480 && height == 781) || (width == 781 && height == 480))
+				else if ((App.ScreenWidth == 480 && App.ScreenHeight == 781) || (App.ScreenWidth == 781 && App.ScreenHeight == 480))
 					CurrentDevice = "wphdr"; // HD Ready - 720p and also Full HD 1080p
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.Windows:

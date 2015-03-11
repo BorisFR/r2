@@ -25,6 +25,9 @@ namespace R2B0app.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+			App.ScreenWidth = (int)UIScreen.MainScreen.Bounds.Width;
+			App.ScreenHeight = (int)UIScreen.MainScreen.Bounds.Height;
+
             return base.FinishedLaunching(app, options);
         }
     }

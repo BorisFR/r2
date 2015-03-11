@@ -41,17 +41,6 @@ namespace R2B0app
 			Global.DetailPage = new DetailPage ();
 			Global.MainPage.Detail = Global.DetailPage;
 		}
-
-		private double width = 0;
-
-		protected override void OnSizeAllocated (double width, double height)
-		{
-			base.OnSizeAllocated (width, height);
-			if (this.width != width) {
-				this.width = width;
-				System.Diagnostics.Debug.WriteLine ("*** OnSizeAllocated PageSplash");
-				Global.RefreshDevice (width, height);
-			}
-		}
+			
 	}
 }

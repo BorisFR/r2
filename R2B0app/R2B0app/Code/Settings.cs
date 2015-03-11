@@ -10,6 +10,7 @@ namespace R2B0app
 		private static bool isInit = false;
 		private static object toLock = new object();
 		private static double[] textSize;
+		public static Dictionary<Screen, string> PanelsTitle;
 		public static Dictionary<Screen, string[]> PanelsButtons;
 		public static Dictionary<Screen, string[]> PanelsCommands;
 
@@ -21,7 +22,7 @@ namespace R2B0app
 		{
 			if (isInit) return;
 			lock (toLock) {
-				System.Diagnostics.Debug.WriteLine ("*** DoInit");
+				System.Diagnostics.Debug.WriteLine ("*** Settings.DoInit");
 				// adapt text size for each platform and display resolution
 				switch (Global.CurrentDevice) {
 // iOS iPhone
@@ -56,7 +57,6 @@ namespace R2B0app
 					break;
 				case "androidwsvga":
 					textSize = new double[]{34,32};
-					System.Diagnostics.Debug.WriteLine ("*** FONT OK");
 					break;
 // windows phone
                 case "wp":
@@ -72,6 +72,12 @@ namespace R2B0app
 					textSize = new double[]{18,10};
 					break;
 				}
+				PanelsTitle = new Dictionary<Screen, string> ();
+				PanelsTitle.Add (Screen.Holos, "HOLOS");
+				PanelsTitle.Add (Screen.Logics, "LOGICS");
+				PanelsTitle.Add (Screen.Main, "MAIN");
+				PanelsTitle.Add (Screen.Panel, "PANEL");
+				PanelsTitle.Add (Screen.Sound, "SOUND");
 				PanelsButtons = new Dictionary<Screen, string[]> ();
 				PanelsButtons.Add (Screen.Main,
                     new string[] { "CLOSE\nALL", "OPEN\nALL", "SMIRK\nWAVE", 

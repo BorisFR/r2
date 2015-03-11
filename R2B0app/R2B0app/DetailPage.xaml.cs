@@ -32,8 +32,6 @@ namespace R2B0app
 			base.OnSizeAllocated (width, height);
 			if (this.width != width) {
 				this.width = width;
-				System.Diagnostics.Debug.WriteLine ("*** OnSizeAllocated DetailPage");
-				Global.RefreshDevice (width, height);
 				if (width > height) {
 					on2columns = true;
 					theGrid.ColumnDefinitions [1].Width = new GridLength (50, GridUnitType.Star);
