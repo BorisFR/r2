@@ -13,11 +13,18 @@ namespace R2B0app
 		public static Dictionary<Screen, string[]> PanelsButtons;
 		public static Dictionary<Screen, string[]> PanelsCommands;
 
+		// textSize[]
+		// 0: keyboard title
+		// 1: keyboard button
+
 		public static void DoInit ()
 		{
 			if (isInit) return;
 			lock (toLock) {
+				System.Diagnostics.Debug.WriteLine ("*** DoInit");
+				// adapt text size for each platform and display resolution
 				switch (Global.CurrentDevice) {
+// iOS iPhone
 				case "ip4s":
 					textSize = new double[]{16,12};
 					break;
@@ -33,6 +40,7 @@ namespace R2B0app
 				case "ip6p":
 					textSize = new double[]{24,22};
 					break;
+// iOS iPad
 				case "ipad2":
 					textSize = new double[]{34,32};
 					break;
@@ -42,9 +50,15 @@ namespace R2B0app
 				case "ipadhd":
 					textSize = new double[]{34,32};
 					break;
+// android
 				case "android":
 					textSize = new double[]{16,8};
 					break;
+				case "androidwsvga":
+					textSize = new double[]{34,32};
+					System.Diagnostics.Debug.WriteLine ("*** FONT OK");
+					break;
+// windows phone
                 case "wp":
                     textSize = new double[] { 22, 14 };
                     break;
@@ -81,9 +95,9 @@ namespace R2B0app
 						"<<", "", ""
 					});
 
-                PanelsButtons[Screen.Main][0] = CrossDeviceInfo.Current.Platform.ToString();
-                PanelsButtons[Screen.Main][1] = CrossDeviceInfo.Current.Model;
-                PanelsButtons[Screen.Main][2] = CrossDeviceInfo.Current.Version;
+//                PanelsButtons[Screen.Main][0] = CrossDeviceInfo.Current.Platform.ToString();
+//                PanelsButtons[Screen.Main][1] = CrossDeviceInfo.Current.Model;
+//                PanelsButtons[Screen.Main][2] = CrossDeviceInfo.Current.Version;
                 System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Platform.ToString());
                 System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Model);
                 System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Version);

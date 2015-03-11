@@ -15,6 +15,7 @@ namespace R2B0app
 
         public ViewKeyboard(Screen screen)
         {
+			System.Diagnostics.Debug.WriteLine ("*** ViewKeyboard");
             InitializeComponent();
 
             this.screen = screen;
@@ -43,19 +44,21 @@ namespace R2B0app
         }
 
 		private void SetButtonsText() {
-			int i = 0;
-			foreach (View v in theGrid.Children) {
-				if (v.GetType ().Equals (typeof(MyButton))) {
-					MyButton b = v as MyButton;
-					try {
-						b.Text = Settings.PanelsButtons [screen] [i + (pageNumber * 12)];
-						b.CommandParameter = Settings.PanelsCommands [screen] [i + (pageNumber * 12)];
-					} catch (Exception err) {
-						System.Diagnostics.Debug.WriteLine (err.Message);
+			Device.BeginInvokeOnMainThread (() => {
+				int i = 0;
+				foreach (View v in theGrid.Children) {
+					if (v.GetType ().Equals (typeof(MyButton))) {
+						MyButton b = v as MyButton;
+						try {
+							b.Text = Settings.PanelsButtons [screen] [i + (pageNumber * 12)];
+							b.CommandParameter = Settings.PanelsCommands [screen] [i + (pageNumber * 12)];
+						} catch (Exception err) {
+							System.Diagnostics.Debug.WriteLine (err.Message);
+						}
+						i++;
 					}
-					i++;
 				}
-			}
+			});
 		}
 
         private void AddButton(int x, int y, string text, string command)
@@ -87,21 +90,24 @@ namespace R2B0app
 			if (b.CommandParameter.Equals ("<<")) {
 				await theGrid.RotateYTo (-90, 200, Easing.SinIn);
 				pageNumber--;
-				SetButtonsText ();
+				//SetButtonsText ();
 				await theGrid.RotateYTo (-360, 600, Easing.BounceOut);
 				await theGrid.RotateYTo (0, 0, null);
+				SetButtonsText ();
 			} else if (b.CommandParameter.Equals (">>")) {
 				await theGrid.RotateYTo (90, 200, Easing.SinIn);
 				pageNumber++;
-				SetButtonsText ();
+				//SetButtonsText ();
 				await theGrid.RotateYTo (360, 600, Easing.BounceOut);
 				await theGrid.RotateYTo (0, 0, null);
+				SetButtonsText ();
 			} else {
 				await b.ScaleTo (0, 100, Easing.SinIn);
 				await b.ScaleTo (1, 100, Easing.SpringOut);
 			}
 			animInProgress = false;
         } 
+
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.DetailPage" 
-Title="Detail" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
+ xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentPage.Content>
 		<Grid x:Name="theGrid" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Black" ColumnSpacing="0" RowSpacing="0">
 			<Grid.RowDefinitions>

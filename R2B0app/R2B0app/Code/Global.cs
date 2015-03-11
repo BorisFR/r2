@@ -12,7 +12,7 @@ namespace R2B0app
 		public static string CurrentDevice;
 
 		public static MainPage MainPage { get; set; }
-		public static DetailPage DetailPage;
+		public static Page DetailPage;
 
 		private static MenuManager menus = new MenuManager();
 		public static MenuManager MenuManager { get { return menus; } }
@@ -37,6 +37,7 @@ namespace R2B0app
                 devicesName.Add("ipadair", "iPad Air");
                 devicesName.Add("ipadhd", "iPad Retina");
                 devicesName.Add("android", "Android");
+				devicesName.Add("androidwsvga", "Android");
                 devicesName.Add("wp", "Windows Phone");
                 devicesName.Add("wpwvga", "Windows Phone");
                 devicesName.Add("wpwxga", "Windows Phone");
@@ -65,10 +66,12 @@ namespace R2B0app
 		}
 
 		public static void RefreshDevice(double width, double height) {
-			System.Diagnostics.Debug.WriteLine ("Width=" + width.ToString ());
+			System.Diagnostics.Debug.WriteLine (width.ToString () + "x" + height.ToString());
 			switch (CrossDeviceInfo.Current.Platform) {
 			case DeviceInfo.Plugin.Abstractions.Platform.Android:
-				CurrentDevice = "android";
+				if ((width == 1024 && height == 471) || (width == 471 && height == 1024))
+					CurrentDevice = "androidwsvga";
+				System.Diagnostics.Debug.WriteLine ("*** DEVICE OK");
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.iOS:
 				if ((width == 320 && height == 480) || (width == 480 && height == 320))

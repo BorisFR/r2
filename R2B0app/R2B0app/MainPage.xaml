@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.MainPage" 
-Title="R2-B0">
+>
 	<MasterDetailPage.Content>
 	</MasterDetailPage.Content>
 </MasterDetailPage>

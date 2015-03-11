@@ -11,6 +11,7 @@ namespace R2B0app
 
 		public DetailPage ()
 		{
+			System.Diagnostics.Debug.WriteLine ("*** DetailPage");
 			InitializeComponent ();
 
 			this.Appearing += delegate(object sender, EventArgs e) {
@@ -31,6 +32,7 @@ namespace R2B0app
 			base.OnSizeAllocated (width, height);
 			if (this.width != width) {
 				this.width = width;
+				System.Diagnostics.Debug.WriteLine ("*** OnSizeAllocated DetailPage");
 				Global.RefreshDevice (width, height);
 				if (width > height) {
 					on2columns = true;

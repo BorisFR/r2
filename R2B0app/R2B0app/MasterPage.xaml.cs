@@ -24,5 +24,12 @@ namespace R2B0app
 			};
 		}
 
+
+		protected override void OnAppearing ()
+		{
+			NavigationPage.SetHasNavigationBar (this, false);
+			base.OnAppearing ();
+		}
+
 	}
 }

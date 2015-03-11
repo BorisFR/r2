@@ -10,7 +10,8 @@ namespace R2B0app
 		{
 			InitializeComponent ();
 
-			Global.DetailPage = new DetailPage ();
+			//Global.DetailPage = new DetailPage ();
+			Global.DetailPage = new PageSplash ();
 			Master = new MasterPage ();
 			Detail = Global.DetailPage;
 
@@ -28,10 +29,31 @@ namespace R2B0app
 						this.IsPresented = true;
 					};
 
-					Global.DetailPage.AddGesture(tap);
+					//Global.DetailPage.AddGesture(tap);
 				}
 			}
 		}
+
+
+		protected override void OnAppearing ()
+		{
+			NavigationPage.SetHasNavigationBar (this, false);
+			base.OnAppearing ();
+		}
+
+
+		private double width = 0;
+
+		protected override void OnSizeAllocated (double width, double height)
+		{
+			base.OnSizeAllocated (width, height);
+			if (this.width != width) {
+				this.width = width;
+				System.Diagnostics.Debug.WriteLine ("*** OnSizeAllocated MainPage");
+				Global.RefreshDevice (width, height);
+			}
+		}
+
 
 	}
 }
