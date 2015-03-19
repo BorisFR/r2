@@ -19,7 +19,7 @@
     <JavaMaximumHeapSize>
     </JavaMaximumHeapSize>
     <NuGetPackageImportStamp>77dfdf71</NuGetPackageImportStamp>
-    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
     <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
