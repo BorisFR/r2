@@ -151,6 +151,7 @@
     <EmbeddedResource Include="Images\menu_info.png" />
     <EmbeddedResource Include="Images\menu_menu.png" />
     <EmbeddedResource Include="Images\bg.png" />
+    <EmbeddedResource Include="Images\R2.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ViewMain.xaml">
