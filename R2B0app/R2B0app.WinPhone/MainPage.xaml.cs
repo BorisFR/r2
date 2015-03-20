@@ -20,8 +20,8 @@ namespace R2B0app.WinPhone
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new R2B0app.App());
 
-			App.ScreenWidth = (int)UIScreen.MainScreen.Bounds.Width;
-			App.ScreenHeight = (int)UIScreen.MainScreen.Bounds.Height;
+			//App.ScreenWidth = (int)UIScreen.MainScreen.Bounds.Width;
+			//App.ScreenHeight = (int)UIScreen.MainScreen.Bounds.Height;
 
         }
     }

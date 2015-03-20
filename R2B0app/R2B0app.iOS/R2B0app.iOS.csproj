@@ -63,7 +63,7 @@
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n>
     </MtouchI18n>
-    <AssemblyName>R2B0app.iOS</AssemblyName>
+    <AssemblyName>R2B0appiOS</AssemblyName>
     <MtouchProfiling>true</MtouchProfiling>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
