@@ -58,6 +58,9 @@ namespace R2B0app
 				case "androidwsvga":
 					textSize = new double[]{34,32};
 					break;
+				case "androidhdr":
+					textSize = new double[]{18,16};
+					break;
 // windows phone
                 case "wp":
                     textSize = new double[] { 22, 14 };
@@ -70,6 +73,7 @@ namespace R2B0app
                     break;
                 default:
 					textSize = new double[]{18,10};
+					System.Diagnostics.Debug.WriteLine (string.Format ("Default for {0}", Global.CurrentDevice));
 					break;
 				}
 				PanelsTitle = new Dictionary<Screen, string> ();

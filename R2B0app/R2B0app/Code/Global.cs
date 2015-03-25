@@ -38,6 +38,7 @@ namespace R2B0app
                 devicesName.Add("ipadhd", "iPad Retina");
                 devicesName.Add("android", "Android");
 				devicesName.Add("androidwsvga", "Android");
+				devicesName.Add("androidhdr", "Android");
                 devicesName.Add("wp", "Windows Phone");
                 devicesName.Add("wpwvga", "Windows Phone");
                 devicesName.Add("wpwxga", "Windows Phone");
@@ -71,6 +72,11 @@ namespace R2B0app
 			case DeviceInfo.Plugin.Abstractions.Platform.Android:
 				if ((App.ScreenWidth == 1024 && App.ScreenHeight == 552) || (App.ScreenWidth == 471 && App.ScreenHeight == 552))
 					CurrentDevice = "androidwsvga";
+				else if ((App.ScreenWidth == 1196 && App.ScreenHeight == 768) || (App.ScreenWidth == 768 && App.ScreenHeight == 1196))
+					CurrentDevice = "androidhdr";
+				else {
+					System.Diagnostics.Debug.WriteLine (string.Format ("Android {0}x{1}", App.ScreenWidth, App.ScreenHeight));
+				}
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.iOS:
 				if ((App.ScreenWidth == 320 && App.ScreenHeight == 480) || (App.ScreenWidth == 480 && App.ScreenHeight == 320))
@@ -83,6 +89,9 @@ namespace R2B0app
 					CurrentDevice = "ip6p";
 				else if ((App.ScreenWidth == 768 && App.ScreenHeight == 1024) || (App.ScreenWidth == 1024 && App.ScreenHeight == 768))
 					CurrentDevice = "ipad2"; // or Retina or Air
+				else {
+					System.Diagnostics.Debug.WriteLine (string.Format ("iOS {0}x{1}", App.ScreenWidth, App.ScreenHeight));
+				}
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.WindowsPhone:
 				CurrentDevice = "wp";
@@ -90,9 +99,15 @@ namespace R2B0app
 					CurrentDevice = "wpwvga"; // Wide VGA and also WXGA
 				else if ((App.ScreenWidth == 480 && App.ScreenHeight == 781) || (App.ScreenWidth == 781 && App.ScreenHeight == 480))
 					CurrentDevice = "wphdr"; // HD Ready - 720p and also Full HD 1080p
+				else {
+					System.Diagnostics.Debug.WriteLine (string.Format ("WP {0}x{1}", App.ScreenWidth, App.ScreenHeight));
+				}
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.Windows:
 				CurrentDevice = "win";
+				 {
+					System.Diagnostics.Debug.WriteLine (string.Format ("Win {0}x{1}", App.ScreenWidth, App.ScreenHeight));
+				}
 				break;
 			default:
 				break;
