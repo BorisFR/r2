@@ -50,7 +50,7 @@
     <BoxView Color="{local:ColorResource Border}" WidthRequest="2" Grid.Row="8" Grid.Column="8" Grid.RowSpan="3" />
     <BoxView Color="{local:ColorResource Border}" HeightRequest="2" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="5" />
 
-    <Label x:Name="lBigCommand" Text="SELECT HOLOPROJECTORS :" TextColor="{local:TextResource Text}" Grid.Row="3" Grid.Column="6" FontAttributes="Italic" FontSize="12" />
+    <Label x:Name="lBigCommand" Text="SELECT HOLOPROJECTORS :" TextColor="{local:TextResource Text}" Grid.Row="3" Grid.Column="6" FontAttributes="Italic" FontSize="{x:Static local:Settings.TextSizeForBigCommandTitle}" />
     <ContentView x:Name="viewKeyboard" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="6" />
     
   </Grid>

@@ -26,6 +26,19 @@ namespace R2B0app.Droid
 			App.ScreenWidth = (int)Resources.DisplayMetrics.WidthPixels; // real pixels
 			App.ScreenHeight = (int)Resources.DisplayMetrics.HeightPixels; // real pixels
         }
+
+		public override void OnAttachedToWindow ()
+		{
+			base.OnAttachedToWindow ();
+			View x = Window.DecorView;
+			//			int sdk = (int)Build.VERSION.SdkInt;
+			//			if (sdk < 16) {
+			x.SystemUiVisibility = StatusBarVisibility.Hidden;
+			x.KeepScreenOn = true;
+			//} else {
+			Window.SetFlags (WindowManagerFlags.Fullscreen, WindowManagerFlags.Fullscreen);
+			//}
+		}
+
     }
 }
-

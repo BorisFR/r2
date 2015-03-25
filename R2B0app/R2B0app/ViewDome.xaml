@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewDome" 
+xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
+	<Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" ColumnSpacing="0" RowSpacing="0">
+		<Image Source="{local:ImageResource dome.png}" Aspect="AspectFit" />
+		<Image Source="{local:ImageResource dome_hp1.png}" Aspect="AspectFit" x:Name="shp1" />
+		<Image Source="{local:ImageResource dome_hp2.png}" Aspect="AspectFit" x:Name="shp2" />
+		<Image Source="{local:ImageResource dome_hp3.png}" Aspect="AspectFit" x:Name="shp3" />
+		<Image Source="{local:ImageResource dome_magicpanel.png}" Aspect="AspectFit" x:Name="smp" />
+		<Image Source="{local:ImageResource dome_p1.png}" Aspect="AspectFit" x:Name="sp1" />
+		<Image Source="{local:ImageResource dome_p2.png}" Aspect="AspectFit" x:Name="sp2" />
+		<Image Source="{local:ImageResource dome_p3.png}" Aspect="AspectFit" x:Name="sp3" />
+		<Image Source="{local:ImageResource dome_p4.png}" Aspect="AspectFit" x:Name="sp4" />
+		<Image Source="{local:ImageResource dome_p7.png}" Aspect="AspectFit" x:Name="sp7" />
+		<Image Source="{local:ImageResource dome_p10.png}" Aspect="AspectFit" x:Name="sp10" />
+		<Image Source="{local:ImageResource dome_p11.png}" Aspect="AspectFit" x:Name="sp11" />
+		<Image Source="{local:ImageResource dome_spp1.png}" Aspect="AspectFit" x:Name="spp1" />
+		<Image Source="{local:ImageResource dome_spp2.png}" Aspect="AspectFit" x:Name="spp2" />
+		<Image Source="{local:ImageResource dome_spp5.png}" Aspect="AspectFit" x:Name="spp5" />
+		<Image Source="{local:ImageResource dome_spp6.png}" Aspect="AspectFit" x:Name="spp6" />
+		<Image Source="{local:ImageResource dome_stop.png}" Aspect="AspectFit" x:Name="stop" />
+	</Grid>
+</ContentView>

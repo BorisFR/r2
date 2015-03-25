@@ -17,6 +17,7 @@ namespace R2B0app
 		// textSize[]
 		// 0: keyboard title
 		// 1: keyboard button
+		// 2: big command title
 
 		public static void DoInit ()
 		{
@@ -129,6 +130,8 @@ namespace R2B0app
 		public static Xamarin.Forms.GridLength KeyboardTitleHeight {
 			get {
 				DoInit ();
+				if(CrossDeviceInfo.Current.Platform == DeviceInfo.Plugin.Abstractions.Platform.Android)
+					return new Xamarin.Forms.GridLength (GetSettingsFor ("TextSizeForKeyboardTitle", textSize [0]) + 2);
 				return new Xamarin.Forms.GridLength (GetSettingsFor ("TextSizeForKeyboardTitle", textSize [0]));
 			}
 		}
@@ -142,6 +145,14 @@ namespace R2B0app
 		}
 
 		public static double TextSizeForKeyboardButton
+		{
+			get {
+				DoInit ();
+				return GetSettingsFor ("TextSizeForKeyboardButton", textSize[1]);
+			}
+		}
+
+		public static double TextSizeForBigCommandTitle
 		{
 			get {
 				DoInit ();

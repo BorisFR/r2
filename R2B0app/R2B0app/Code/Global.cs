@@ -74,6 +74,8 @@ namespace R2B0app
 					CurrentDevice = "androidwsvga";
 				else if ((App.ScreenWidth == 1196 && App.ScreenHeight == 768) || (App.ScreenWidth == 768 && App.ScreenHeight == 1196))
 					CurrentDevice = "androidhdr";
+				else if ((App.ScreenWidth == 1184 && App.ScreenHeight == 768) || (App.ScreenWidth == 768 && App.ScreenHeight == 1184))
+					CurrentDevice = "androidhdr";
 				else {
 					System.Diagnostics.Debug.WriteLine (string.Format ("Android {0}x{1}", App.ScreenWidth, App.ScreenHeight));
 				}

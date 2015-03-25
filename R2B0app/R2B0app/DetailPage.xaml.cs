@@ -18,7 +18,8 @@ namespace R2B0app
 				if(isFirst) {
 					//Global.GotoPage (MyPage.Home);
 					viewHead.Content = new ViewHead ();
-					viewLeft.Content = new ViewMain(Screen.Holos);
+					viewLeft.Content = new ViewDome();
+					//viewLeft.Content = new ViewMain(Screen.Holos);
 					viewRight.Content = new ViewMain(Screen.Logics);
 					isFirst = false;
 				}
