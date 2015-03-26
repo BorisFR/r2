@@ -15,8 +15,18 @@ namespace R2B0app
 		{
 			if (Source == null)
 				return null;
-			var imageSource = ImageSource.FromResource("R2B0app.Images." + Source);
-			return imageSource;
+            try
+            {
+                var imageSource = ImageSource.FromResource("R2B0app.Images." + Source);
+                if (imageSource == null)
+                    System.Diagnostics.Debug.WriteLine("******** ProvideValue null " + Source);
+                return imageSource;
+            }
+            catch (Exception err)
+            {
+                System.Diagnostics.Debug.WriteLine("******** ProvideValue " + err.Message);
+                return null;
+            }
 		}
 
 	}

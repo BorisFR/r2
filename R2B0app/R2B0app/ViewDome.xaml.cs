@@ -8,8 +8,10 @@ namespace R2B0app
 	{
 		public ViewDome ()
 		{
+            System.Diagnostics.Debug.WriteLine("Loading ViewDome");
 			InitializeComponent ();
-		}
+            System.Diagnostics.Debug.WriteLine("Loading ViewDome OK");
+        }
 	}
 }
 
