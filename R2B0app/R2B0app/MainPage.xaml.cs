@@ -9,7 +9,6 @@ namespace R2B0app
 		public MainPage ()
 		{
 			InitializeComponent ();
-
 			//Global.DetailPage = new DetailPage ();
 			Global.DetailPage = new PageSplash ();
 			Master = new MasterPage ();
