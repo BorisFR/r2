@@ -3,21 +3,21 @@
 xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" ColumnSpacing="0" RowSpacing="0">
 		<Image Source="{local:ImageResource dome.png}" Aspect="AspectFit" />
-		<Image Source="{local:ImageResource dome_hp1.png}" Aspect="AspectFit" x:Name="shp1" />
-		<Image Source="{local:ImageResource dome_hp2.png}" Aspect="AspectFit" x:Name="shp2" />
-		<Image Source="{local:ImageResource dome_hp3.png}" Aspect="AspectFit" x:Name="shp3" />
-		<Image Source="{local:ImageResource dome_magicpanel.png}" Aspect="AspectFit" x:Name="smp" />
-		<Image Source="{local:ImageResource dome_p1.png}" Aspect="AspectFit" x:Name="sp1" />
-		<Image Source="{local:ImageResource dome_p2.png}" Aspect="AspectFit" x:Name="sp2" />
-		<Image Source="{local:ImageResource dome_p3.png}" Aspect="AspectFit" x:Name="sp3" />
-		<Image Source="{local:ImageResource dome_p4.png}" Aspect="AspectFit" x:Name="sp4" />
-		<Image Source="{local:ImageResource dome_p7.png}" Aspect="AspectFit" x:Name="sp7" />
-		<Image Source="{local:ImageResource dome_p10.png}" Aspect="AspectFit" x:Name="sp10" />
-		<Image Source="{local:ImageResource dome_p11.png}" Aspect="AspectFit" x:Name="sp11" />
-		<Image Source="{local:ImageResource dome_pp1.png}" Aspect="AspectFit" x:Name="spp1" />
-		<Image Source="{local:ImageResource dome_pp2.png}" Aspect="AspectFit" x:Name="spp2" />
-		<Image Source="{local:ImageResource dome_pp5.png}" Aspect="AspectFit" x:Name="spp5" />
-		<Image Source="{local:ImageResource dome_pp6.png}" Aspect="AspectFit" x:Name="spp6" />
-		<Image Source="{local:ImageResource dome_top.png}" Aspect="AspectFit" x:Name="stop" />
+		<Image Source="{local:ImageResource dome_hp1.png}" Aspect="AspectFit" x:Name="hp1" />
+		<Image Source="{local:ImageResource dome_hp2.png}" Aspect="AspectFit" x:Name="hp2" />
+		<Image Source="{local:ImageResource dome_hp3.png}" Aspect="AspectFit" x:Name="hp3" />
+		<Image Source="{local:ImageResource dome_magicpanel.png}" Aspect="AspectFit" x:Name="mp" />
+		<Image Source="{local:ImageResource dome_p1.png}" Aspect="AspectFit" x:Name="p1" />
+		<Image Source="{local:ImageResource dome_p2.png}" Aspect="AspectFit" x:Name="p2" />
+		<Image Source="{local:ImageResource dome_p3.png}" Aspect="AspectFit" x:Name="p3" />
+		<Image Source="{local:ImageResource dome_p4.png}" Aspect="AspectFit" x:Name="p4" />
+		<Image Source="{local:ImageResource dome_p7.png}" Aspect="AspectFit" x:Name="p7" />
+		<Image Source="{local:ImageResource dome_p10.png}" Aspect="AspectFit" x:Name="p10" />
+		<Image Source="{local:ImageResource dome_p11.png}" Aspect="AspectFit" x:Name="p11" />
+		<Image Source="{local:ImageResource dome_pp1.png}" Aspect="AspectFit" x:Name="pp1" />
+		<Image Source="{local:ImageResource dome_pp2.png}" Aspect="AspectFit" x:Name="pp2" />
+		<Image Source="{local:ImageResource dome_pp5.png}" Aspect="AspectFit" x:Name="pp5" />
+		<Image Source="{local:ImageResource dome_pp6.png}" Aspect="AspectFit" x:Name="pp6" />
+		<Image Source="{local:ImageResource dome_top.png}" Aspect="AspectFit" x:Name="top" />
 	</Grid>
 </ContentView>

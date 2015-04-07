@@ -17,14 +17,15 @@ namespace R2B0app
 			All.Clear ();
 
 			MenuGroup mg = new MenuGroup ("");
-			mg.Add (new Menu (){ Page = MyPage.Home, Title = "Accueil", Detail = "Ecran d'accueil", Icon = "home" });
-			mg.Add (new Menu (){ Page = MyPage.About, Title = "A propos de", Detail = "Informations sur l'application et le device", Icon = "info" });
+			mg.Add (new Menu (){ Page = MyPage.Home, Title = "Home", Detail = "Homepage", Icon = "home" });
+			mg.Add (new Menu (){ Page = MyPage.About, Title = "About", Detail = "About program and devices", Icon = "info" });
+			mg.Add (new Menu (){ Page = MyPage.Settings, Title = "Settings", Detail = "Settings parameters", Icon = "home" });
 			All.Add (mg);
 
-			mg = new MenuGroup ("Showroom");
-			mg.Add (new Menu (){ Page = MyPage.Settings, Title = "Settings", Detail = "Paramètres", Icon = "home" });
-			mg.Add (new Menu (){ Page = MyPage.Main, Title = "Main", Detail = "Principal", Icon = "home" });
-			mg.Add (new Menu (){ Page = MyPage.SplashScreen, Title = "SplashScreen", Detail = "Splash", Icon = "home" });
+			mg = new MenuGroup ("Pages");
+			mg.Add (new Menu (){ Page = MyPage.Holos, Title = "Holos", Detail = "Holos & Magic panel", Icon = "home" });
+			mg.Add (new Menu (){ Page = MyPage.Panels, Title = "Panels", Detail = "Panels, Pie Panels & Top", Icon = "home" });
+			mg.Add (new Menu (){ Page = MyPage.Logics, Title = "Logics", Detail = "Logics display", Icon = "home" });
 			All.Add (mg);
 		}
 

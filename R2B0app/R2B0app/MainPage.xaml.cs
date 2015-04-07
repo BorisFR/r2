@@ -10,9 +10,9 @@ namespace R2B0app
 		{
 			InitializeComponent ();
 			//Global.DetailPage = new DetailPage ();
-			Global.DetailPage = new PageSplash ();
+			//Global.DetailPage = new PageSplash ();
 			Master = new MasterPage ();
-			Detail = Global.DetailPage;
+			Detail = new PageSplash (); //Global.DetailPage;
 
 			this.MasterBehavior = MasterBehavior.Popover;
 

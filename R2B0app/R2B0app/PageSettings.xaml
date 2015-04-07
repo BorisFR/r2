@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.PageSettings">
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout Orientation="Vertical">
+
+				<!-- Panels -->
+				<Label Text="Motorized Panels" HorizontalOptions="Center" />
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp1" />
+					<Label Text="Panel 1" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp2" />
+					<Label Text="Panel 2" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp3" />
+					<Label Text="Panel 3" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp4" />
+					<Label Text="Panel 4" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp7" />
+					<Label Text="Panel 7" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp10" />
+					<Label Text="Panel 10" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sp11" />
+					<Label Text="Panel 11" />
+				</StackLayout>
+
+
+				<!-- Pie Panels -->
+				<Label Text="Motorized Pie Panels" HorizontalOptions="Center" />
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="spp1" />
+					<Label Text="Pie Panel 1" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="spp2" />
+					<Label Text="Pie Panel 2" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="spp5" />
+					<Label Text="Pie Panel 5" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="spp6" />
+					<Label Text="Pie Panel 6" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Switch x:Name="sppt" />
+					<Label Text="Top Pie Panel (round)" />
+				</StackLayout>
+
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

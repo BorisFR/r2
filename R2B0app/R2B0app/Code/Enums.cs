@@ -12,7 +12,11 @@ namespace R2B0app
 		About,
 		Home,
 		Settings,
-		Main
+		Main,
+		Holos,
+		Logics,
+		Panels,
+		Sound
 	}
 
     public enum Screen

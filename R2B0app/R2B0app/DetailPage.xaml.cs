@@ -18,8 +18,7 @@ namespace R2B0app
 				if(isFirst) {
 					//Global.GotoPage (MyPage.Home);
 					viewHead.Content = new ViewHead ();
-					viewLeft.Content = new ViewDome();
-					//viewLeft.Content = new ViewMain(Screen.Holos);
+					viewLeft.Content = new ViewDome(Screen.Logics);
 					viewRight.Content = new ViewMain(Screen.Logics);
 					isFirst = false;
 				}
@@ -45,6 +44,23 @@ namespace R2B0app
 
 		public void SetContent(View page) {
 			viewLeft.Content = page;
+		}
+
+		public void ChangeContent(MyPage newPage) {
+			switch (newPage) {
+			case MyPage.Holos:
+				viewLeft.Content = new ViewDome(Screen.Holos);
+				viewRight.Content = new ViewMain(Screen.Holos);
+				break;
+			case MyPage.Logics:
+				viewLeft.Content = new ViewDome(Screen.Logics);
+				viewRight.Content = new ViewMain(Screen.Logics);
+				break;
+			case MyPage.Panels:
+				viewLeft.Content = new ViewDome(Screen.Panel);
+				viewRight.Content = new ViewMain(Screen.Panel);
+				break;
+			}
 		}
 
 //		public void PopupPage(Page page) {

@@ -12,7 +12,7 @@ namespace R2B0app
 		public static string CurrentDevice;
 
 		public static MainPage MainPage { get; set; }
-		public static Page DetailPage;
+		public static DetailPage DetailPage;
 
 		private static MenuManager menus = new MenuManager();
 		public static MenuManager MenuManager { get { return menus; } }
@@ -120,6 +120,16 @@ namespace R2B0app
 			switch (newPage) {
 			case MyPage.About:
 				//DetailPage.SetContent (new AboutView ());
+				break;
+			case MyPage.Settings:
+				MainPage.Detail = new PageSettings ();
+				break;
+			case MyPage.Holos:
+			case MyPage.Logics:
+			case MyPage.Panels:
+				if (!Global.MainPage.Detail.GetType ().Equals (typeof(DetailPage)))
+					Global.MainPage.Detail = Global.DetailPage;
+				DetailPage.ChangeContent (newPage);
 				break;
 			}
 		}
