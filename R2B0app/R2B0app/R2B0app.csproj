@@ -193,6 +193,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DeviceInfoReadme.txt" />
+    <EmbeddedResource Include="Images\bg1.jpg" />
+    <EmbeddedResource Include="Images\bg2.png" />
+    <EmbeddedResource Include="Images\bg3.jpg" />
     <Content Include="notes.txt" />
   </ItemGroup>
   <ItemGroup />

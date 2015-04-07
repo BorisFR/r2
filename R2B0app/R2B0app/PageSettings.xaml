@@ -1,62 +1,63 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.PageSettings">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.PageSettings" 
+Title="Settings">
 	<ContentPage.Content>
 		<ScrollView>
 			<StackLayout Orientation="Vertical">
 
 				<!-- Panels -->
-				<Label Text="Motorized Panels" HorizontalOptions="Center" />
+				<Label Text="Motorized Panels" HorizontalOptions="Center" FontSize="Large" />
 				<StackLayout Orientation="Horizontal">
-					<Switch x:Name="sp1" />
-					<Label Text="Panel 1" />
+					<Switch x:Name="sp1" VerticalOptions="Center" />
+					<Label Text="Panel 1" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sp2" />
-					<Label Text="Panel 2" />
+					<Label Text="Panel 2" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sp3" />
-					<Label Text="Panel 3" />
+					<Label Text="Panel 3" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sp4" />
-					<Label Text="Panel 4" />
+					<Label Text="Panel 4" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sp7" />
-					<Label Text="Panel 7" />
+					<Label Text="Panel 7" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sp10" />
-					<Label Text="Panel 10" />
+					<Label Text="Panel 10" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sp11" />
-					<Label Text="Panel 11" />
+					<Label Text="Panel 11" VerticalOptions="Center" />
 				</StackLayout>
 
 
 				<!-- Pie Panels -->
-				<Label Text="Motorized Pie Panels" HorizontalOptions="Center" />
+				<Label Text="Motorized Pie Panels" HorizontalOptions="Center" FontSize="Large" />
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="spp1" />
-					<Label Text="Pie Panel 1" />
+					<Label Text="Pie Panel 1" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="spp2" />
-					<Label Text="Pie Panel 2" />
+					<Label Text="Pie Panel 2" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="spp5" />
-					<Label Text="Pie Panel 5" />
+					<Label Text="Pie Panel 5" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="spp6" />
-					<Label Text="Pie Panel 6" />
+					<Label Text="Pie Panel 6" VerticalOptions="Center" />
 				</StackLayout>
 				<StackLayout Orientation="Horizontal">
 					<Switch x:Name="sppt" />
-					<Label Text="Top Pie Panel (round)" />
+					<Label Text="Top Pie Panel (round)" VerticalOptions="Center" />
 				</StackLayout>
 
 			</StackLayout>

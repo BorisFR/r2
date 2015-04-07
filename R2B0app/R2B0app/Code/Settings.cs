@@ -160,5 +160,14 @@ namespace R2B0app
 			}
 		}
 
+        public static Xamarin.Forms.GridLength TextSizeForBigCommandTitleHeight
+        {
+            get
+            {
+                DoInit();
+                return new Xamarin.Forms.GridLength(GetSettingsFor("TextSizeForKeyboardButton", textSize[1]));
+            }
+        }
+
 	}
 }
