@@ -20,7 +20,7 @@ namespace R2B0app
 
             this.screen = screen;
 			lTitle.Text = string.Format("{0} CONTROL 1", Settings.PanelsTitle[screen]);
-			lTitle.FontSize = Settings.TextSizeForKeyboardTitle;
+			//lTitle.FontSize = Settings.TextSizeForKeyboardTitle;
 
 			this.screen = Screen.Main;
             for (int i = 0; i < 12; i++)
@@ -53,7 +53,7 @@ namespace R2B0app
 				BackgroundColor = Color.Transparent,
 				BorderColor = ThemeColors.GetColor ("TEXT"),
 				BorderWidth = 1,
-				FontSize = Settings.TextSizeForKeyboardButton,
+				FontSize = Global.ForBinding.TextSizeForKeyboardButton,
 				HorizontalOptions = LayoutOptions.Fill,
 				VerticalOptions = LayoutOptions.FillAndExpand
 			};

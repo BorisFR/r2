@@ -9,7 +9,7 @@ namespace R2B0app
 
 		private static bool isInit = false;
 		private static object toLock = new object();
-		private static double[] textSize;
+		public static double[] textSize;
 		public static Dictionary<Screen, string> PanelsTitle;
 		public static Dictionary<Screen, string[]> PanelsButtons;
 		public static Dictionary<Screen, string[]> PanelsCommands;
@@ -28,52 +28,52 @@ namespace R2B0app
 				switch (Global.CurrentDevice) {
 // iOS iPhone
 				case "ip4s":
-					textSize = new double[]{16,12};
+					textSize = new double[]{16,12,12};
 					break;
 				case "ip5":
-					textSize = new double[]{18,16};
+					textSize = new double[]{18,16,16};
 					break;
 				case "ip5s":
-					textSize = new double[]{18,16};
+					textSize = new double[]{18,16,16};
 					break;
 				case "ip6":
-					textSize = new double[]{22,20};
+					textSize = new double[]{22,20,20};
 					break;
 				case "ip6p":
-					textSize = new double[]{24,22};
+					textSize = new double[]{24,22,22};
 					break;
 // iOS iPad
 				case "ipad2":
-					textSize = new double[]{34,32};
+					textSize = new double[]{34,32,32};
 					break;
 				case "ipadair":
-					textSize = new double[]{34,32};
+					textSize = new double[]{34,32,32};
 					break;
 				case "ipadhd":
-					textSize = new double[]{34,32};
+					textSize = new double[]{34,32,32};
 					break;
 // android
 				case "android":
-					textSize = new double[]{16,8};
+					textSize = new double[]{16,8,8};
 					break;
 				case "androidwsvga":
-					textSize = new double[]{34,32};
+					textSize = new double[]{34,32,32};
 					break;
 				case "androidhdr":
-					textSize = new double[]{18,16};
+					textSize = new double[]{18,16,16};
 					break;
 // windows phone
                 case "wp":
-                    textSize = new double[] { 22, 14 };
+                    textSize = new double[] { 22, 14, 14 };
                     break;
                 case "wpwvga":
-                    textSize = new double[] { 24, 16 };
+                    textSize = new double[] { 24, 16, 16 };
                     break;
                 case "wphdr":
-                    textSize = new double[] { 26, 18 };
+                    textSize = new double[] { 26, 18, 18 };
                     break;
                 default:
-					textSize = new double[]{18,10};
+					textSize = new double[]{18,10,10};
 					System.Diagnostics.Debug.WriteLine (string.Format ("Default for {0}", Global.CurrentDevice));
 					break;
 				}
@@ -106,13 +106,6 @@ namespace R2B0app
 						"<<", "", ""
 					});
 
-//                PanelsButtons[Screen.Main][0] = CrossDeviceInfo.Current.Platform.ToString();
-//                PanelsButtons[Screen.Main][1] = CrossDeviceInfo.Current.Model;
-//                PanelsButtons[Screen.Main][2] = CrossDeviceInfo.Current.Version;
-                System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Platform.ToString());
-                System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Model);
-                System.Diagnostics.Debug.WriteLine(CrossDeviceInfo.Current.Version);
-
                 //CrossVibrate.Current;
 
 				isInit = true;
@@ -120,54 +113,31 @@ namespace R2B0app
 		}
 
 		private static string GetSettingsFor(string key, string defaultValue) {
+			if (App.Current.Properties.ContainsKey (key))
+				return App.Current.Properties [key] as string;
 			return defaultValue;
 		}
 
-		private static double GetSettingsFor(string key, double defaultValue) {
+		public static double GetSettingsFor(string key, double defaultValue) {
+			if (App.Current.Properties.ContainsKey (key))
+				return (double) App.Current.Properties [key];
 			return defaultValue;
 		}
 
-		public static Xamarin.Forms.GridLength KeyboardTitleHeight {
-			get {
-				DoInit ();
-				if(CrossDeviceInfo.Current.Platform == DeviceInfo.Plugin.Abstractions.Platform.Android)
-					return new Xamarin.Forms.GridLength (GetSettingsFor ("TextSizeForKeyboardTitle", textSize [0]) + 2);
-				return new Xamarin.Forms.GridLength (GetSettingsFor ("TextSizeForKeyboardTitle", textSize [0]));
-			}
+		private static void SetSettingsFor(string key, string value) {
+			if (App.Current.Properties.ContainsKey (key))
+				App.Current.Properties [key] = value;
+			else
+				App.Current.Properties.Add (key, value);
 		}
 
-		public static double TextSizeForKeyboardTitle
-		{
-			get {
-				DoInit ();
-				return GetSettingsFor ("TextSizeForKeyboardTitle", textSize[0]);
-			}
+		public static void SetSettingsFor(string key, double value) {
+			if (App.Current.Properties.ContainsKey (key))
+				App.Current.Properties [key] = value;
+			else
+				App.Current.Properties.Add (key, value);
 		}
 
-		public static double TextSizeForKeyboardButton
-		{
-			get {
-				DoInit ();
-				return GetSettingsFor ("TextSizeForKeyboardButton", textSize[1]);
-			}
-		}
-
-		public static double TextSizeForBigCommandTitle
-		{
-			get {
-				DoInit ();
-				return GetSettingsFor ("TextSizeForKeyboardButton", textSize[1]);
-			}
-		}
-
-        public static Xamarin.Forms.GridLength TextSizeForBigCommandTitleHeight
-        {
-            get
-            {
-                DoInit();
-                return new Xamarin.Forms.GridLength(GetSettingsFor("TextSizeForKeyboardButton", textSize[1]));
-            }
-        }
 
 	}
 }

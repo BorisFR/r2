@@ -7,6 +7,7 @@ namespace R2B0app
 {
 	public static class Global
 	{
+		public static ForBinding ForBinding;
 
 		private static Dictionary<string, string> devicesName = new Dictionary<string, string>();
 		public static string CurrentDevice;
@@ -62,6 +63,8 @@ namespace R2B0app
                     default:
                         break;
                 }
+				Settings.DoInit ();
+				ForBinding = new ForBinding ();
                 isInit = true;
             }
 		}
@@ -120,6 +123,7 @@ namespace R2B0app
 			switch (newPage) {
 			case MyPage.About:
 				//DetailPage.SetContent (new AboutView ());
+				MainPage.Detail = new PageAbout ();
 				break;
 			case MyPage.Settings:
 				MainPage.Detail = new PageSettings ();

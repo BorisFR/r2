@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.PageAbout" 
+Title="About" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
+	<TabbedPage.Children>
+		<ContentPage Title="Software" Icon="iSoftware.png">
+			<ContentPage.Content>
+				<ScrollView>
+					<StackLayout x:Name="theLayout1" Orientation="Vertical" Padding="12">
+					</StackLayout>
+				</ScrollView>
+			</ContentPage.Content>
+		</ContentPage>
+		<ContentPage Title="Device" Icon="iHardware.png">
+			<ContentPage.Content>
+				<ScrollView>
+					<StackLayout x:Name="theLayout2" Orientation="Vertical" Padding="12">
+					</StackLayout>
+				</ScrollView>
+			</ContentPage.Content>
+		</ContentPage>
+	</TabbedPage.Children>
+</TabbedPage>

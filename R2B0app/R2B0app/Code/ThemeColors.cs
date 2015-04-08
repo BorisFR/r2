@@ -21,7 +21,8 @@ namespace R2B0app
             lock (toLock)
             {
                 theme = new Dictionary<string, OneColor>();
-                theme.Add("BACKGROUND", new OneColor() { Red = 11, Green = 20, Blue = 72, Alpha = 200 });
+                //theme.Add("BACKGROUND", new OneColor() { Red = 11, Green = 20, Blue = 72, Alpha = 200 });
+				theme.Add("BACKGROUND", new OneColor() { Red = 230, Green = 230, Blue = 230, Alpha = 200 });
                 theme.Add("BORDER", new OneColor() { Red = 123, Green = 178, Blue = 237, Alpha = 230 });
                 theme.Add("FILL", new OneColor() { Red = 21, Green = 56, Blue = 126, Alpha = 220 });
                 theme.Add("FILLBORDER", new OneColor() { Red = 21, Green = 56, Blue = 126, Alpha = 180 });

@@ -3,9 +3,9 @@
 Title="Master" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentPage.Content>
 		<ScrollView BackgroundColor="{local:BGResource Background}">
-			<StackLayout Orientation="Vertical" BackgroundColor="{local:BGResource FillBorder}">
+			<StackLayout Orientation="Vertical" BackgroundColor="{local:BGResource Background}">
 				<Label Text="R2-B0" Font="Bold,Medium" HorizontalOptions="Center" TextColor="{local:TextResource TEXT}" />
-				<ListView x:Name="theList" IsGroupingEnabled="true" BackgroundColor="{local:BGResource Fill}">
+				<ListView x:Name="theList" IsGroupingEnabled="true" BackgroundColor="{local:BGResource Background}">
 		        <ListView.GroupHeaderTemplate>
 		        <DataTemplate>
 		        	<ViewCell>

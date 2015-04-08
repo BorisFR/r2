@@ -16,7 +16,9 @@ namespace R2B0app
 		Holos,
 		Logics,
 		Panels,
-		Sound
+		Sound,
+		Music,
+		Status
 	}
 
     public enum Screen

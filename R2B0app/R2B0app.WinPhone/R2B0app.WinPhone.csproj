@@ -121,6 +121,12 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="CustomRenderer\MyButtonRenderer.cs" />
+    <None Include="iElectronic.png" />
+    <None Include="iFont.png" />
+    <None Include="iNetwork.png" />
+    <None Include="iHardware.png" />
+    <None Include="iMenu.png" />
+    <None Include="iSoftware.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DeviceInfoReadme.txt" />

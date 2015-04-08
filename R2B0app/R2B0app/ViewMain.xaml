@@ -52,7 +52,7 @@
 
     <Grid BackgroundColor="Red" Grid.Row="3" Grid.Column="6">
       <Grid.RowDefinitions>
-        <RowDefinition Height="{x:Static local:Settings.TextSizeForBigCommandTitleHeight}" />
+        <RowDefinition Height="{local:GridHeightResource TextSizeForBigCommandTitle}" />
         <RowDefinition Height="2" />
         <RowDefinition Height="*" />
       </Grid.RowDefinitions>
@@ -61,11 +61,10 @@
         <ColumnDefinition Width="*" />
         <ColumnDefinition Width="2" />
       </Grid.ColumnDefinitions>
-      <Label x:Name="lBigCommand" Text="SELECT HOLOPROJECTORS :" TextColor="{local:TextResource Text}" Grid.Row="0" Grid.Column="1" FontAttributes="Italic" FontSize="{x:Static local:Settings.TextSizeForBigCommandTitle}" />
+      <Label x:Name="lBigCommand" Text="SELECT HOLOPROJECTORS :" TextColor="{local:TextResource Text}" Grid.Row="0" Grid.Column="1" FontAttributes="Italic" FontSize="{local:FontSizeResource TextSizeForBigCommandTitle}" />
       <Label Text="Coucou" Grid.Row="2" Grid.Column="1" />
     </Grid>
 
-    <!--<Label x:Name="lBigCommand" Text="SELECT HOLOPROJECTORS :" TextColor="{local:TextResource Text}" Grid.Row="3" Grid.Column="6" FontAttributes="Italic" FontSize="{x:Static local:Settings.TextSizeForBigCommandTitle}" />-->
     <ContentView x:Name="viewKeyboard" BackgroundColor="Transparent" Grid.Row="9" Grid.Column="6" />
     
   </Grid>

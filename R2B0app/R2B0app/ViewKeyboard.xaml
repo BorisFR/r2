@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
   <Grid x:Name="theGrid" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" ColumnSpacing="0" RowSpacing="0">
     <Grid.RowDefinitions>
-      <RowDefinition Height="{x:Static local:Settings.KeyboardTitleHeight}" /> <!-- TITLE -->
+      <RowDefinition Height="{local:GridHeightResource TextSizeForKeyboardTitle}" /> <!-- TITLE -->
       <RowDefinition Height="2" /> <!-- spacer -->
       <RowDefinition Height="2" />
       <RowDefinition Height="*" />
@@ -55,7 +55,7 @@
     <BoxView Color="{local:ColorResource FillBorder}" Grid.Row="10" Grid.Column="9" Grid.RowSpan="3" Grid.ColumnSpan="3" />
     <BoxView Color="{local:ColorResource FillBorder}" Grid.Row="14" Grid.Column="9" Grid.RowSpan="3" Grid.ColumnSpan="3" />
 
-    <Label x:Name="lTitle" Text="lTitle" TextColor="{local:TextResource Text}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="13" FontAttributes="Italic" HorizontalOptions="Center" FontSize="{x:Static local:Settings.TextSizeForKeyboardTitle}" YAlign="Center" VerticalOptions="Center" />
-    
+    <Label x:Name="lTitle" Text="lTitle" TextColor="{local:TextResource Text}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="13" FontAttributes="Italic" HorizontalOptions="Center" FontSize="{local:FontSizeResource TextSizeForKeyboardTitle}" YAlign="Center" VerticalOptions="Center" />
+
   </Grid>
 </ContentView>

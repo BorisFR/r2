@@ -83,6 +83,14 @@
     <Compile Include="PageSettings.xaml.cs">
       <DependentUpon>PageSettings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Code\HelperXaml.cs" />
+    <Compile Include="Code\ForBinding.cs" />
+    <Compile Include="Extensions\FontSizeResourceExtension.cs" />
+    <Compile Include="Extensions\GridHeightResourceExtension.cs" />
+    <Compile Include="PageAbout.xaml.cs">
+      <DependentUpon>PageAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\IconResourceExtension.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -177,6 +185,15 @@
     <EmbeddedResource Include="PageSettings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="PageAbout.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\menu_music.png" />
+    <EmbeddedResource Include="Images\menu_sound.png" />
+    <EmbeddedResource Include="Images\menu_about.png" />
+    <EmbeddedResource Include="Images\menu_settings.png" />
+    <EmbeddedResource Include="Images\menu_status.png" />
+    <EmbeddedResource Include="Images\iElectronic.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ViewMain.xaml">

@@ -9,6 +9,7 @@
     <RootNamespace>R2B0app.iOSn</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>R2B0appiOSn</AssemblyName>
+    <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -154,5 +155,13 @@
       <Project>{6AD2BB1C-BB7E-4078-8BD2-B2AB2CD22A59}</Project>
       <Name>R2B0app</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iElectronic.png" />
+    <BundleResource Include="Resources\iFont.png" />
+    <BundleResource Include="Resources\iNetwork.png" />
+    <BundleResource Include="Resources\iSoftware.png" />
+    <BundleResource Include="Resources\iHardware.png" />
+    <BundleResource Include="Resources\iMenu.png" />
   </ItemGroup>
 </Project>
