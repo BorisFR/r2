@@ -11,7 +11,6 @@ namespace R2B0app
 		{
 			InitializeComponent ();
 
-			btStart.Clicked += HandleClicked;
 			this.Appearing += HandleAppearing;
 		}
 
@@ -27,14 +26,9 @@ namespace R2B0app
 			if (isDone)
 				return true;
 			isDone = true;
-			System.Diagnostics.Debug.WriteLine ("*** TIMER PageSplash");
+			//System.Diagnostics.Debug.WriteLine ("*** TIMER PageSplash");
 			GotoMain ();
 			return false;
-		}
-
-		void HandleClicked (object sender, EventArgs e)
-		{
-			GotoMain ();
 		}
 
 		private void GotoMain() {

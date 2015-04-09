@@ -91,6 +91,9 @@
       <DependentUpon>PageAbout.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\IconResourceExtension.cs" />
+    <Compile Include="ViewR2.xaml.cs">
+      <DependentUpon>ViewR2.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -194,6 +197,11 @@
     <EmbeddedResource Include="Images\menu_settings.png" />
     <EmbeddedResource Include="Images\menu_status.png" />
     <EmbeddedResource Include="Images\iElectronic.png" />
+    <EmbeddedResource Include="ViewR2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\menu_r2.png" />
+    <EmbeddedResource Include="Images\Nubia.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ViewMain.xaml">

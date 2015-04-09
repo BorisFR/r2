@@ -128,6 +128,11 @@ namespace R2B0app
 			case MyPage.Settings:
 				MainPage.Detail = new PageSettings ();
 				break;
+			case MyPage.Main:
+				if (!Global.MainPage.Detail.GetType ().Equals (typeof(DetailPage)))
+					Global.MainPage.Detail = Global.DetailPage;
+				DetailPage.ChangeContent (newPage);
+				break;
 			case MyPage.Holos:
 			case MyPage.Logics:
 			case MyPage.Panels:

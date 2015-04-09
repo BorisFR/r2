@@ -12,3 +12,42 @@ Ce système est situé dans le Secteur Corellian.
 Ce secteur est composé de 24 systèmes et est situé dans le Core Worlds.
 
 http://starwars.wikia.com/wiki/Nubia
+
+
+
+Screens
+-------
+1/ start app = App.cs => MainPage() (Xamarin MasterDetailPage)
+available via Global.MainPage
+
+2/ MainPage (Xamarin MasterDetailPage)
+Master => MasterPage() (Xamarin ContentPage) = menu
+Detail => PageSplash() (Xamarin ContentPage) = loading screen
+
+3/ PageSplash timeout (Xamarin ContentPage)
+Detail => DetailPage()
+
+4/ DetailPage en mode Main (Xamarin ContentPage)
+Header 	=> ViewHead()	= header with infos
+Left 	=> ViewR2()		= graphical menu on R2 picture
+Right 	=> ViewMain()	= keyboard with main functionalities
+
+ViewMain => include ViewKeyboard() to send action to R2
+graphical menu / masterpage menu => change DetailPage
+
+5/ other pages
+in 3 parts (header/left/right) (Xamarin ContentView)
+Holos		=> to play with HP and Magic Panel
+	ViewDome() + ViewMain()
+Panels		=> to play with panels
+	ViewDome() + ViewMain()
+Logics		=> to change logics display
+	ViewDome() + ViewMain()
+Sound		=> to make some noise
+	Viewxxx() + ViewMain()
+Music		=> to launch music
+	Viewxxx() + ViewMain()
+in full screen (Xamarin ContentPage)
+About 		=> informations about the smartphone and the program
+Settings 	=> to change settings : R2 configuration, Communication, FontSize, ...
+

@@ -11,14 +11,14 @@ namespace R2B0app
 
 		public DetailPage ()
 		{
-			System.Diagnostics.Debug.WriteLine ("*** DetailPage");
+			//System.Diagnostics.Debug.WriteLine ("*** DetailPage");
 			InitializeComponent ();
 
 			this.Appearing += delegate(object sender, EventArgs e) {
 				if(isFirst) {
 					//Global.GotoPage (MyPage.Home);
 					viewHead.Content = new ViewHead ();
-                    ChangeContent(MyPage.Logics);
+					ChangeContent(MyPage.Main);
 					isFirst = false;
 				}
 			};
@@ -47,6 +47,10 @@ namespace R2B0app
 
 		public void ChangeContent(MyPage newPage) {
 			switch (newPage) {
+			case MyPage.Main:
+				viewLeft.Content = new ViewR2 ();
+				viewRight.Content = new ViewMain(Screen.Main);
+				break;
 			case MyPage.Holos:
 				viewLeft.Content = new ViewDome(Screen.Holos);
 				viewRight.Content = new ViewMain(Screen.Holos);

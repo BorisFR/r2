@@ -17,6 +17,7 @@ namespace R2B0app
 			All.Clear ();
 
 			MenuGroup mg = new MenuGroup ("");
+			mg.Add (new Menu (){ Page = MyPage.Main, Title = "Main", Detail = "Start screen", Icon = "r2" });
 			mg.Add (new Menu (){ Page = MyPage.Holos, Title = "Holos", Detail = "Holos & Magic panel", Icon = "home" });
 			mg.Add (new Menu (){ Page = MyPage.Panels, Title = "Panels", Detail = "Panels, Pie Panels & Top", Icon = "home" });
 			mg.Add (new Menu (){ Page = MyPage.Logics, Title = "Logics", Detail = "Logics display", Icon = "home" });

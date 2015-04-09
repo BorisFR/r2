@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewR2" 
+xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
+	<ContentView.Content>
+	<Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Transparent" ColumnSpacing="0" RowSpacing="0">
+		<Image Source="{local:ImageResource R2.png}" Aspect="AspectFit" />
+	</Grid>
+	</ContentView.Content>
+</ContentView>
