@@ -113,6 +113,10 @@
     <AndroidResource Include="Resources\drawable\iElectronic.png" />
     <AndroidResource Include="Resources\drawable\iFont.png" />
     <AndroidResource Include="Resources\drawable\iNetwork.png" />
+    <AndroidResource Include="Resources\drawable\iBuilder.png" />
+    <AndroidResource Include="Resources\drawable\iSoftware.png" />
+    <AndroidResource Include="Resources\drawable\iHardware.png" />
+    <AndroidResource Include="Resources\drawable\iMenu.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DeviceInfoReadme.txt" />

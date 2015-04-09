@@ -2,10 +2,34 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.PageSettings" 
 Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<TabbedPage.Children>
+
+		<ContentPage x:Name="tTab0" Title="Builder" Icon="iBuilder.png">
+			<ContentPage.Content>
+				<ScrollView>
+					<StackLayout Orientation="Vertical" Padding="12">
+
+						<Label Text="Builder" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+
+						<BoxView HeightRequest="4" />
+
+						<Label Text="Name" HorizontalOptions="Start" FontSize="Large" />
+						<Entry Keyboard="Text" Text="{Binding BuilderName, Mode=TwoWay}" />
+
+						<Label Text="Club" HorizontalOptions="Start" FontSize="Large" />
+
+					</StackLayout>
+				</ScrollView>
+			</ContentPage.Content>
+		</ContentPage>
+
 		<ContentPage x:Name="tTab1" Title="Hardware" Icon="iElectronic.png">
 			<ContentPage.Content>
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
+
+						<Label Text="DOME" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+
+						<BoxView HeightRequest="4" />
 
 						<!-- Top Panel -->
 						<Label Text="Motorized Top Panel" HorizontalOptions="Center" FontSize="Large" />
@@ -64,6 +88,42 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 							<Label Text="Panel 11" VerticalOptions="Center" />
 						</StackLayout>
 
+						<BoxView HeightRequest="4" />
+
+						<Label Text="BODY" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+
+						<BoxView HeightRequest="4" />
+
+						<!-- Utility Arms -->
+						<Label Text="Motorized Utility Arms" HorizontalOptions="Center" FontSize="Large" />
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="suaup" />
+							<Label Text="Top utility arm" VerticalOptions="Center" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="suadown" />
+							<Label Text="Bottom utility arm" VerticalOptions="Center" />
+						</StackLayout>
+
+						<!-- Doors -->
+						<Label Text="Motorized Doors" HorizontalOptions="Center" FontSize="Large" />
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="sleftdoor" />
+							<Label Text="Left door" VerticalOptions="Center" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="srightdoor" />
+							<Label Text="Right door" VerticalOptions="Center" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="schargebaydoor" />
+							<Label Text="Charge Bay Indicators door" VerticalOptions="Center" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="sdataportdoor" />
+							<Label Text="Dataport Logics door" VerticalOptions="Center" />
+						</StackLayout>
+
 					</StackLayout>
 				</ScrollView>
 			</ContentPage.Content>
@@ -73,6 +133,9 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 			<ContentPage.Content>
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
+
+						<Label Text="Mode" HorizontalOptions="Start" FontSize="Large" />
+						<Picker x:Name="pickCommunication" />
 
 					</StackLayout>
 				</ScrollView>

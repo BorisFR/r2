@@ -13,6 +13,12 @@ namespace R2B0app
 		{
 			InitializeComponent ();
 			this.BindingContext = Global.ForBinding;
+
+			pickCommunication.Items.Add ("Bluetooth LE");
+			pickCommunication.Items.Add ("Serial");
+			pickCommunication.Items.Add ("Wifi");
+			pickCommunication.Items.Add ("Wifi Direct");
+
 		}
 
 		protected override void OnAppearing ()

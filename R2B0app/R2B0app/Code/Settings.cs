@@ -112,9 +112,9 @@ namespace R2B0app
 			}
 		}
 
-		private static string GetSettingsFor(string key, string defaultValue) {
+		public static string GetSettingsFor(string key, string defaultValue) {
 			if (App.Current.Properties.ContainsKey (key))
-				return App.Current.Properties [key] as string;
+				return (string) App.Current.Properties [key];
 			return defaultValue;
 		}
 
@@ -124,11 +124,12 @@ namespace R2B0app
 			return defaultValue;
 		}
 
-		private static void SetSettingsFor(string key, string value) {
+		public static void SetSettingsFor(string key, string value) {
 			if (App.Current.Properties.ContainsKey (key))
 				App.Current.Properties [key] = value;
 			else
 				App.Current.Properties.Add (key, value);
+			System.Diagnostics.Debug.WriteLine ("saving " + key + "=" + value);
 		}
 
 		public static void SetSettingsFor(string key, double value) {

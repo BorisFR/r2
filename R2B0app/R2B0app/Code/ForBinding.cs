@@ -5,10 +5,23 @@ namespace R2B0app
 {
 	public class ForBinding : INotifyPropertyChanged
 	{
+		public string BuilderName
+		{
+			get { 
+					return Settings.GetSettingsFor ("BuilderName", "R2 Builders");
+				}
+			set {
+				if (Settings.GetSettingsFor ("BuilderName", "R2 Builders").Equals(value))
+					return;
+				Settings.SetSettingsFor ("BuilderName", value);
+				OnPropertyChanged ("BuilderName");
+			}
+		}
+
 		public double TextSizeForKeyboardTitle
 		{
 			get { 
-				double x = Settings.GetSettingsFor("TextSizeForKeyboardTitle", Settings.textSize[0]); // Settings.TextSizeForKeyboardTitle;
+				double x = Settings.GetSettingsFor("TextSizeForKeyboardTitle", Settings.textSize[0]);
 				return x; }
 			set {
 				if (TextSizeForKeyboardTitle == value)

@@ -163,5 +163,6 @@
     <BundleResource Include="Resources\iSoftware.png" />
     <BundleResource Include="Resources\iHardware.png" />
     <BundleResource Include="Resources\iMenu.png" />
+    <BundleResource Include="Resources\iBuilder.png" />
   </ItemGroup>
 </Project>

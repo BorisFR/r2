@@ -127,6 +127,7 @@
     <None Include="iHardware.png" />
     <None Include="iMenu.png" />
     <None Include="iSoftware.png" />
+    <None Include="iBuilder.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DeviceInfoReadme.txt" />

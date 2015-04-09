@@ -3,8 +3,6 @@ https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery
 https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/DeviceInfo
 https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Settings
 
-
-
 L'entreprise Industrial Automaton se trouve dans la ville Rordis.
 Rordis City, ville majeur de Nubia.
 Nubia se situe dans le Système Nubus, composé de 5 planetes.
@@ -13,6 +11,11 @@ Ce secteur est composé de 24 systèmes et est situé dans le Core Worlds.
 
 http://starwars.wikia.com/wiki/Nubia
 
+R-Series
+iBeacon/rfid : https://github.com/r2fid/r2fid.github.io
+
+for xamarin BLE
+http://forums.xamarin.com/discussion/27250/bluetooth-support-in-xamarin-forms#latest
 
 
 Screens
