@@ -29,9 +29,22 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 
 						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="DOME" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+
+
+						<!-- Lifts -->
 						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
+						<Label Text="Lift" HorizontalOptions="Center" FontSize="Large" />
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="slPeriscope" />
+							<Label Text="Periscope" VerticalOptions="Center" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal">
+							<Switch x:Name="slLifeScanner" />
+							<Label Text="Life Scanner" VerticalOptions="Center" />
+						</StackLayout>
 
 						<!-- Top Panel -->
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="Motorized Top Panel" HorizontalOptions="Center" FontSize="Large" />
 						<StackLayout Orientation="Horizontal">
 							<Switch x:Name="sppt" />
