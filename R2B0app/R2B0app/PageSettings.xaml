@@ -8,9 +8,9 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
 
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="Builder" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
-
-						<BoxView HeightRequest="4" />
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 
 						<Label Text="Name" HorizontalOptions="Start" FontSize="Large" />
 						<Entry Keyboard="Text" Text="{Binding BuilderName, Mode=TwoWay}" />
@@ -27,9 +27,9 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
 
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="DOME" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
-
-						<BoxView HeightRequest="4" />
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 
 						<!-- Top Panel -->
 						<Label Text="Motorized Top Panel" HorizontalOptions="Center" FontSize="Large" />
@@ -39,6 +39,7 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 						</StackLayout>
 
 						<!-- Pie Panels -->
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="Motorized Pie Panels" HorizontalOptions="Center" FontSize="Large" />
 						<StackLayout Orientation="Horizontal">
 							<Switch x:Name="spp1" />
@@ -58,6 +59,7 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 						</StackLayout>
 
 						<!-- Panels -->
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="Motorized Panels" HorizontalOptions="Center" FontSize="Large" />
 						<StackLayout Orientation="Horizontal">
 							<Switch x:Name="sp1" VerticalOptions="Center" />
@@ -88,11 +90,9 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 							<Label Text="Panel 11" VerticalOptions="Center" />
 						</StackLayout>
 
-						<BoxView HeightRequest="4" />
-
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="BODY" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
-
-						<BoxView HeightRequest="4" />
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 
 						<!-- Utility Arms -->
 						<Label Text="Motorized Utility Arms" HorizontalOptions="Center" FontSize="Large" />
@@ -106,6 +106,7 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 						</StackLayout>
 
 						<!-- Doors -->
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 						<Label Text="Motorized Doors" HorizontalOptions="Center" FontSize="Large" />
 						<StackLayout Orientation="Horizontal">
 							<Switch x:Name="sleftdoor" />
@@ -134,6 +135,10 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
 
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
+						<Label Text="COMMUNICATION" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
+
 						<Label Text="Mode" HorizontalOptions="Start" FontSize="Large" />
 						<Picker x:Name="pickCommunication" />
 
@@ -146,6 +151,10 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 			<ContentPage.Content>
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
+
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
+						<Label Text="FONT SIZE" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 
 						<!-- Font size -->
 						<Label Text="Command title" VerticalOptions="Center" />
@@ -174,6 +183,10 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 			<ContentPage.Content>
 				<ScrollView>
 					<StackLayout Orientation="Vertical" Padding="12">
+
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
+						<Label Text="MENU" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" />
+						<BoxView HeightRequest="4" WidthRequest="350" HorizontalOptions="Center" Color="Silver" />
 
 						<StackLayout Orientation="Horizontal">
 							<Switch x:Name="sMabout" IsToggled="true" />
