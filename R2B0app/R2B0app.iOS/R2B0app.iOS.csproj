@@ -10,6 +10,7 @@
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <NuGetPackageImportStamp>9ce94f81</NuGetPackageImportStamp>
     <ReleaseVersion>0.2</ReleaseVersion>
+    <AssemblyName>R2B0appiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,7 +28,6 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchI18n>
     </MtouchI18n>
-    <AssemblyName>R2B0appiOS</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
   </PropertyGroup>
@@ -41,7 +41,6 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <AssemblyName>R2B0appiOS</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -62,7 +61,6 @@
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n>
     </MtouchI18n>
-    <AssemblyName>R2B0appiOS</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchLink>Full</MtouchLink>
