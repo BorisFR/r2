@@ -65,8 +65,29 @@ namespace R2B0app
                 }
 				Settings.DoInit ();
 				ForBinding = new ForBinding ();
+				Communication.Init ();
+				Device.StartTimer (new TimeSpan (0, 0, 1), TimerSecond);
                 isInit = true;
             }
+		}
+
+		private static DateTime now;
+		private static Random rnd = new Random(DateTime.Now.Millisecond);
+
+		private static bool TimerSecond() {
+			now = DateTime.Now;
+			ForBinding.Now = now;
+			ForBinding.Hour = now.Hour;
+			ForBinding.Minute = now.Minute;
+			ForBinding.Second = now.Second;
+			ForBinding.BatteryBody = ForBinding.batteryBody + 1;// = 80 + rnd.Next (50);
+			if (ForBinding.batteryBody > 140)
+				ForBinding.batteryBody = 80;
+			ForBinding.BatteryHead = ForBinding.batteryHead + 1;// = 80 + rnd.Next (50);
+			if (ForBinding.batteryHead > 140)
+				ForBinding.batteryHead = 80;
+			ForBinding.RadioSignal = rnd.Next (7);
+			return true;
 		}
 
 		public static void RefreshDevice() {

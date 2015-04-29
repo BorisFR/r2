@@ -2,9 +2,31 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewHead" 
 xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 	<ContentView.Content>
-	<StackLayout Orientation="Horizontal">
-		<Image Source="{local:ImageResource logoIA32.png}" WidthRequest="96" HeightRequest="32" Aspect="Fill" />
-		<Label Text="Hello Head" />
-	</StackLayout>
+		<Grid x:Name="theGrid" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="#BBFFFFFF" ColumnSpacing="0" RowSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="32" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="98" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="340" />
+			</Grid.ColumnDefinitions>
+			<Image Source="{local:ImageResource logoIA32.png}" WidthRequest="96" HeightRequest="32" Aspect="Fill" />
+			<Label Text="Hello Head" Grid.Column="1" />
+			<StackLayout Orientation="Horizontal" Grid.Column="2" HorizontalOptions="End">
+				<Image Source="{Binding RadioSignalSource}" WidthRequest="32" HeightRequest="32" Aspect="AspectFit" />
+				<StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="Center">
+					<Label Text="Head" TextColor="Black" FontSize="Small" />
+					<Label Text="{Binding BatteryHead, StringFormat='{0} %'}" FontSize="Small" TextColor="Black" HorizontalOptions="Center" />
+				</StackLayout>
+				<Image Source="{Binding BatteryHeadSource}" WidthRequest="20" HeightRequest="32" Aspect="AspectFit" />
+				<StackLayout Orientation="Vertical" Spacing="0" HorizontalOptions="Center">
+					<Label Text="Body" TextColor="Black" FontSize="Small" />
+					<Label Text="{Binding BatteryBody, StringFormat='{0} %'}" FontSize="Small" TextColor="Black" HorizontalOptions="Center" />
+				</StackLayout>
+				<Image Source="{Binding BatteryBodySource}" WidthRequest="20" HeightRequest="32" Aspect="AspectFit" />
+				<Label Text="{Binding Now, StringFormat='{0:T}'}" TextColor="Black" VerticalOptions="Center" />
+			</StackLayout>
+		</Grid>
 	</ContentView.Content>
 </ContentView>

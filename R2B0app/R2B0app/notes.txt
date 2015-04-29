@@ -41,15 +41,15 @@ graphical menu / masterpage menu => change DetailPage
 5/ other pages
 in 3 parts (header/left/right) (Xamarin ContentView)
 Holos		=> to play with HP and Magic Panel
-	ViewDome() + ViewMain()
+				ViewDome() + ViewMain()
 Panels		=> to play with panels
-	ViewDome() + ViewMain()
+				ViewDome() + ViewMain()
 Logics		=> to change logics display
-	ViewDome() + ViewMain()
+				ViewDome() + ViewMain()
 Sound		=> to make some noise
-	Viewxxx() + ViewMain()
+				Viewxxx() + ViewMain()
 Music		=> to launch music
-	Viewxxx() + ViewMain()
+				Viewxxx() + ViewMain()
 in full screen (Xamarin ContentPage)
 About 		=> informations about the smartphone and the program
 Settings 	=> to change settings : R2 configuration, Communication, FontSize, ...

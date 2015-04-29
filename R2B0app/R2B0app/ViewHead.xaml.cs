@@ -9,6 +9,7 @@ namespace R2B0app
 		public ViewHead ()
 		{
 			InitializeComponent ();
+			theGrid.BindingContext = Global.ForBinding;
 		}
 	}
 }
