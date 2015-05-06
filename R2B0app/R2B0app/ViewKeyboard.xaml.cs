@@ -94,6 +94,7 @@ namespace R2B0app
 				await theGrid.RotateYTo (0, 0, null);
 				//SetButtonsText ();
 			} else {
+				Communication.SendCommand ("panel", "sel=all&act=open");
 				await b.ScaleTo (0, 100, Easing.SinIn);
 				await b.ScaleTo (1, 100, Easing.SpringOut);
 			}

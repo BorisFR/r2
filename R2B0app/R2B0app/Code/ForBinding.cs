@@ -19,6 +19,19 @@ namespace R2B0app
 			}
 		}
 
+		public string IpAddress
+		{
+			get { 
+				return Settings.GetSettingsFor ("IpAddress", "192.168.4.1");
+			}
+			set {
+				if (Settings.GetSettingsFor ("IpAddress", "192.168.4.1").Equals(value))
+					return;
+				Settings.SetSettingsFor ("IpAddress", value);
+				OnPropertyChanged ("IpAddress");
+			}
+		}
+
 		public double TextSizeForKeyboardTitle
 		{
 			get { 
@@ -60,6 +73,64 @@ namespace R2B0app
 		}
 
 
+		private int sendCommand = 0;
+		private int sendCommandOk = 0;
+		private int sendingCommand = 0;
+		private string lastErrorMessage = string.Empty;
+
+		public int SendCommand {
+			get { return sendCommand; }
+			set { if (sendCommand == value) return;
+				sendCommand = value; OnPropertyChanged ("SendCommand"); } }
+
+		public int SendCommandOk {
+			get { return sendCommandOk; }
+			set { if (sendCommandOk == value) return;
+				sendCommandOk = value; OnPropertyChanged ("SendCommandOk"); } }
+
+		public int SendingCommandStatus {
+			get { return sendingCommand; }
+			set { if (sendingCommand == value) return;
+				sendingCommand = value; OnPropertyChanged ("SendingCommandStatus");OnPropertyChanged ("SendingCommandStatusSource"); } }
+
+		public void AnimateIcons() {
+			if (sendingCommand > 0) {
+				if (sendingCommand == 4)
+					SendingCommandStatus = 1;
+				else
+					SendingCommandStatus = sendingCommand + 1;
+			} else if (sendingCommand < 0) {
+				SendingCommandStatus = sendingCommand + 1;
+			}
+		}
+
+		public ImageSource SendingCommandStatusSource {
+			get { 				
+				string s = sendingCommand.ToString ();
+				if (sendingCommand < 0)
+					s = "E";
+				return ImageSource.FromResource ("R2B0app.Images.comm" + s + ".png"); }
+		}
+
+		public string LastErrorMessage {
+			get { return lastErrorMessage; }
+			set { if (lastErrorMessage == value) return;
+				lastErrorMessage = value; OnPropertyChanged ("LastErrorMessage"); } }
+
+		public void StartSending() {
+			SendingCommandStatus = 1;
+			SendCommand = sendCommand + 1;
+		}
+
+		public void StopSending() {
+			SendingCommandStatus = 0;
+			SendCommandOk = sendCommandOk + 1;
+		}
+
+		public void ErrorSending(string error) {
+			LastErrorMessage = error;
+			SendingCommandStatus = -5;
+		}
 
 
 		private DateTime now;
@@ -102,9 +173,9 @@ namespace R2B0app
 		}
 
 		private static int ConvertBattery12VtoPercent(int current) {
-			if (current >= 120)
-				return 100;
-			if (current < 73)
+//			if (current >= 130)
+//				return 100;
+			if (current < 80)
 				return 0;
 			int t = current - 80;
 			return t * 100 / 40;
@@ -113,11 +184,13 @@ namespace R2B0app
 		private static int ConvertBattery12VtoIcon(int current) {
 			if (current >= 130)
 				return 7;
-			if (current < 73)
+			if (current >= 124)
+				return 6;
+			if (current < 80)
 				return 0;
 			int t = current - 80;
-			System.Diagnostics.Debug.WriteLine (current.ToString () + " => " + (int)(t * 7 / 50));
-			return t * 7 / 50;
+			//System.Diagnostics.Debug.WriteLine (current.ToString () + " => " + (int)(t * 7 / 50));
+			return t * 5 / 50 + 1;
 		}
 
 		public int batteryHead = 110;

@@ -4,7 +4,7 @@
 	<ContentPage.Content>
 		<Grid x:Name="theGrid" HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="Black" ColumnSpacing="0" RowSpacing="0">
 			<Grid.RowDefinitions>
-		      <RowDefinition Height="32" />
+		      <RowDefinition Height="33" />
 		      <RowDefinition Height="*" />
 	    	</Grid.RowDefinitions>
 	    	<Grid.ColumnDefinitions>

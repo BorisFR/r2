@@ -28,6 +28,8 @@ namespace R2B0app.Droid
 		{
 			global::Refractored.Xam.Forms.Vibrate.Droid.Resource.String.ApplicationName = global::R2B0app.Droid.Resource.String.ApplicationName;
 			global::Refractored.Xam.Forms.Vibrate.Droid.Resource.String.Hello = global::R2B0app.Droid.Resource.String.Hello;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::R2B0app.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::R2B0app.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::R2B0app.Droid.Resource.String.ApplicationName;
 			global::Xamarin.Forms.Platform.Resource.String.Hello = global::R2B0app.Droid.Resource.String.Hello;
 		}

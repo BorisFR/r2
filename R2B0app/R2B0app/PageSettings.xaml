@@ -155,6 +155,9 @@ Title="Settings" xmlns:local="clr-namespace:R2B0app;assembly=R2B0app">
 						<Label Text="Mode" HorizontalOptions="Start" FontSize="Large" />
 						<Picker x:Name="pickCommunication" />
 
+						<Label Text="IP Address" HorizontalOptions="Start" FontSize="Large" />
+						<Entry Keyboard="Numeric" Text="{Binding IpAddress, Mode=TwoWay}" />
+
 					</StackLayout>
 				</ScrollView>
 			</ContentPage.Content>

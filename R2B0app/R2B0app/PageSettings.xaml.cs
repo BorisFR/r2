@@ -24,8 +24,7 @@ namespace R2B0app
 		protected override void OnAppearing ()
 		{
 			base.OnAppearing ();
-			//this.Animate("", s => Layout (new Rectangle (((-1 + s) * Width), Y, Width, Height)), 16, 250, Easing.Linear, null, null);
-			this.Animate("", (s) => Layout(new Rectangle(((1 - s) * Width), Y, Width, Height)), 16, 600, Easing.Linear, null, null);
+			//this.Animate("", (s) => Layout(new Rectangle(((1 - s) * Width), Y, Width, Height)), 16, 600, Easing.Linear, null, null);
 		}
 
 		protected override void OnDisappearing ()

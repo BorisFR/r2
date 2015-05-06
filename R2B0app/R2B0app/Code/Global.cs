@@ -87,6 +87,7 @@ namespace R2B0app
 			if (ForBinding.batteryHead > 140)
 				ForBinding.batteryHead = 80;
 			ForBinding.RadioSignal = rnd.Next (7);
+			ForBinding.AnimateIcons ();
 			return true;
 		}
 

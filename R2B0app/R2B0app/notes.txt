@@ -12,6 +12,7 @@ Ce secteur est composé de 24 systèmes et est situé dans le Core Worlds.
 http://starwars.wikia.com/wiki/Nubia
 
 R-Series
+https://code.google.com/p/rseries-open-control/
 iBeacon/rfid : https://github.com/r2fid/r2fid.github.io
 
 for xamarin BLE
@@ -53,4 +54,10 @@ Music		=> to launch music
 in full screen (Xamarin ContentPage)
 About 		=> informations about the smartphone and the program
 Settings 	=> to change settings : R2 configuration, Communication, FontSize, ...
+
+Toutes les minutes :
+durée + niveau batterie
+
+
+https://github.com/oysteinkrog/SQLite.Net-PCL
 
