@@ -22,7 +22,10 @@ namespace R2B0app
 			lTitle.Text = string.Format("{0} CONTROL 1", Settings.PanelsTitle[screen]);
 			//lTitle.FontSize = Settings.TextSizeForKeyboardTitle;
 
-			this.screen = Screen.Main;
+			if (this.screen != Screen.Sound)
+				this.screen = Screen.Main;
+			this.screen = Screen.Sound;
+
             for (int i = 0; i < 12; i++)
             {
 				AddButton(2 + 4 * (i % 3), 3 + 4 * (i / 3),Settings.PanelsButtons[this.screen][i], Settings.PanelsCommands[this.screen][i]);
@@ -94,7 +97,11 @@ namespace R2B0app
 				await theGrid.RotateYTo (0, 0, null);
 				//SetButtonsText ();
 			} else {
-				Communication.SendCommand ("panel", "sel=all&act=open");
+				if (b.CommandParameter != null) {
+					string command = b.CommandParameter as string;
+					if(command.Length > 0)
+						Communication.SendCommand (command);
+				}
 				await b.ScaleTo (0, 100, Easing.SinIn);
 				await b.ScaleTo (1, 100, Easing.SpringOut);
 			}

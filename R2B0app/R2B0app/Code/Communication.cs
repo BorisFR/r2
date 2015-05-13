@@ -9,6 +9,7 @@ namespace R2B0app
 	public static class Communication
 	{
 		public static event Received Received;
+		public static event Received ReceivedError;
 
 		private static HttpClient httpClient;
 
@@ -35,11 +36,13 @@ namespace R2B0app
 					Received(res);
 			} catch (Exception err) {
 				Global.ForBinding.ErrorSending (err.Message);
+				if(ReceivedError != null)
+					ReceivedError(command);
 				System.Diagnostics.Debug.WriteLine("sending error: " + err.Message);
 			}
 		}
 
-		public static void SendCommand(string command, string var) {
+		public static void SendCommand(R2Command command, string var) {
 			string toSend = string.Format ("{0}?{1}", command, var);
 			SendCommand (toSend);
 		}

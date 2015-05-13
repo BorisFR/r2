@@ -29,4 +29,37 @@ namespace R2B0app
         Panel,
         Sound
     }
+
+	public enum R2Command 
+	{
+		/// <summary>
+		/// Set the state of the unit.
+		/// var mode=State
+		/// State could be one of:
+		/// Autonomous
+		/// Shutdown
+		/// </summary>
+		State,
+		Panel,
+		Logics,
+		PSI,
+		/// <summary>
+		/// Play a sound.
+		/// var type=SoundType to play (whitle, ...)
+		/// </summary>
+		Sound,
+		/// <summary>
+		/// Play or Stop a music.
+		/// var action=Play/Stop
+		/// var id=Music to play
+		/// </summary>
+		Music,
+		/// <summary>
+		/// Request status of elements. 
+		/// If no var, all elements.
+		/// var element=ElementName
+		/// </summary>
+		Status
+	}
+
 }

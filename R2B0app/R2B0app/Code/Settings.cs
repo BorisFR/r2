@@ -89,7 +89,18 @@ namespace R2B0app
 						"LEIA", "CANTINA", "BEEP\nCANTINA",
 						"HOLOS\nON", "HOLOS\nOFF", "TOP RC",
 						"SCREAM", "SCREAM\nNo Pan", ">>",
-						"PAGE 2", "", "",
+						"", "", "",
+						"", "", "",
+						"", "", "",
+						"<<", "", ""
+					});
+				PanelsButtons.Add (Screen.Sound,
+					new string[] {  
+						"Alarm", "Happy", "Humour",
+						"Misc.", "Ooh", "Other",
+						"Proc", "Razz", "Scream",
+						"sentinel", "Whistle", ">>",
+						"Status", "State\nAUTO", "State\nDOWN",
 						"", "", "",
 						"", "", "",
 						"<<", "", ""
@@ -101,6 +112,17 @@ namespace R2B0app
 						"", "", "",
 						"", "", ">>",
 						"", "", "",
+						"", "", "",
+						"", "", "",
+						"<<", "", ""
+					});
+				PanelsCommands.Add (Screen.Sound,
+					new string[] {
+						"sound?type=alarm", "sound?type=happy", "sound?type=humour",
+						"sound?type=misc", "sound?type=ooh", "sound?type=other",
+						"sound?type=proc", "sound?type=razz", "sound?type=scream", 
+						"sound?type=sentinel", "sound?type=whistle", ">>",
+						"status", "state?mode=autonomous", "state?mode=shutdown",
 						"", "", "",
 						"", "", "",
 						"<<", "", ""

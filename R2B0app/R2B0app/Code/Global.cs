@@ -66,9 +66,57 @@ namespace R2B0app
 				Settings.DoInit ();
 				ForBinding = new ForBinding ();
 				Communication.Init ();
+				lastStatusAsk = new DateTime (2000, 1, 1);
+				Communication.Received += Communication_Received;
+				Communication.ReceivedError += Communication_ReceivedError;
 				Device.StartTimer (new TimeSpan (0, 0, 1), TimerSecond);
                 isInit = true;
             }
+		}
+
+		static void Communication_ReceivedError (string value)
+		{
+			if (!statusInProgress)
+				return;
+			if (!value.StartsWith ("/status"))
+				return;
+			// on réessai dans 10 secondes (1 minute - 50 secondes)
+			lastStatusAsk = DateTime.Now.AddSeconds (-50);
+			statusInProgress = false;
+		}
+
+		private static DateTime lastStatusAsk;
+		private static bool statusInProgress = false;
+
+		static void Communication_Received (string value)
+		{
+			if (!statusInProgress)
+				return;
+			if (!value.StartsWith ("status"))
+				return;
+			lastStatusAsk = DateTime.Now;
+			statusInProgress = false;
+			// TODO: parse value to extract statuses
+			string[] result = value.Split('@');
+			foreach (string s in result) {
+				string[] values = s.Split ('=');
+				switch (values [0]) {
+				case "BatteryBody":
+					ForBinding.BatteryBody = Convert.ToInt16 (values [1]);
+					break;
+				case "BatteryHead":
+					ForBinding.BatteryHead = Convert.ToInt16 (values [1]);
+					break;
+				}
+			}
+
+//			ForBinding.BatteryBody = ForBinding.batteryBody + 1;// = 80 + rnd.Next (50);
+//			if (ForBinding.batteryBody > 140)
+//				ForBinding.batteryBody = 80;
+//			ForBinding.BatteryHead = ForBinding.batteryHead + 1;// = 80 + rnd.Next (50);
+//			if (ForBinding.batteryHead > 140)
+//				ForBinding.batteryHead = 80;
+			ForBinding.RadioSignal = rnd.Next (7);
 		}
 
 		private static DateTime now;
@@ -80,13 +128,12 @@ namespace R2B0app
 			ForBinding.Hour = now.Hour;
 			ForBinding.Minute = now.Minute;
 			ForBinding.Second = now.Second;
-			ForBinding.BatteryBody = ForBinding.batteryBody + 1;// = 80 + rnd.Next (50);
-			if (ForBinding.batteryBody > 140)
-				ForBinding.batteryBody = 80;
-			ForBinding.BatteryHead = ForBinding.batteryHead + 1;// = 80 + rnd.Next (50);
-			if (ForBinding.batteryHead > 140)
-				ForBinding.batteryHead = 80;
-			ForBinding.RadioSignal = rnd.Next (7);
+			if (!statusInProgress) {
+				if ((now - lastStatusAsk).TotalSeconds > 59) {
+					statusInProgress = true;
+					Communication.SendCommand ("/status");
+				}
+			}
 			ForBinding.AnimateIcons ();
 			return true;
 		}

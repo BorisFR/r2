@@ -61,3 +61,49 @@ durée + niveau batterie
 
 https://github.com/oysteinkrog/SQLite.Net-PCL
 
+Ajouter ESP8266 à la plaque
+pgm : d'abord essai de se connecté au wifi maison
+si pas réussi (n'est pas dans la liste des wifi détecté)
+alors démarrer comme un access point
+
+/status
+renvoi status@nom=value@nom=value@...@nom=value
+pour batterie, en int : 120 = 12.0 V
+"BatteryBody"
+"BatteryHead"
+level radio wifi ?
+level radio entre dome et body ?
+
+
+arduino
+
+cbi + dataport
+spectrum analyser
+WAV trigger
+ESP8266 => !!!! ATTENTION : 3.3 V !!!!!!
+mesure des batteries
+
+lister les PIN utilisées...
+I2C => avec qui ?
+serial ? 3 serial de dispo (en plus du 0 (pin 0 et 1) qui sert à l'IDE) de 14 à 19
+2 à 13 et 44 à 46 : PWM
+PIN avec interrupt
+2 (int0) et aussi PWM
+3 (int1) et aussi PWM
+18 (int5) et aussi TX1
+19 (int4) et aussi RX1
+20 (int3) et aussi SDA
+21 (int2) et aussi SDL
+
+arduino en intermédiaire pour le dôme !
+brancher connecteur R/C de rotation du dôme sur arduino
+et faire un PWM depuis l'arduino vers la carte SYREN
+haut/bas (à droite, avec le dôme) de la R/C pour ouvrir/fermer les panels ?
+utiliser un switch de la R/C pour changer de mode ???
+genre 
+switch off = dome + panel
+switch on = bras gauche + bras droit
+
+ajouter émetteur 2.4 GHz pour communication avec Dôme (qui aura un récepteur)
+
+

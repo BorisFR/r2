@@ -138,7 +138,8 @@ namespace R2B0app
 		public DateTime Now {
 			get { return now; }
 			set { if (now == value) return;
-				now = value; OnPropertyChanged ("Now"); } }
+				now = value; OnPropertyChanged ("Now"); 
+			} }
 
 		private int hour = 0;
 
