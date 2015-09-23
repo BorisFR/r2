@@ -85,9 +85,9 @@ namespace R2B0app
 				PanelsTitle.Add (Screen.Sound, "SOUND");
 				PanelsButtons = new Dictionary<Screen, string[]> ();
 				PanelsButtons.Add (Screen.Main,
-                    new string[] { "CLOSE\nALL", "OPEN\nALL", "SMIRK\nWAVE", 
-						"LEIA", "CANTINA", "BEEP\nCANTINA",
-						"HOLOS\nON", "HOLOS\nOFF", "TOP RC",
+                    new string[] { "STOP", "V+", "V-", 
+						"Boris", "Marche", "Cantina",
+						"Leia", "HOLOS\nOFF", "TOP RC",
 						"SCREAM", "SCREAM\nNo Pan", ">>",
 						"", "", "",
 						"", "", "",
@@ -96,20 +96,22 @@ namespace R2B0app
 					});
 				PanelsButtons.Add (Screen.Sound,
 					new string[] {  
-						"Alarm", "Happy", "Humour",
-						"Misc.", "Ooh", "Other",
-						"Proc", "Razz", "Scream",
-						"sentinel", "Whistle", ">>",
-						"Status", "State\nAUTO", "State\nDOWN",
-						"", "", "",
-						"", "", "",
-						"<<", "", ""
+						"Alarm", "Hum", "Misc",
+						"Ooh", "Proc", "Razz",
+						"Scream", "Sentence", "Whistle",
+						"Wolf\nWhistle", "Wowie", ">>",
+						"Annoyed", "Chortie", "DoDoo",
+						"Failure", "Groan", "Motivator",
+						"Overhere", "Patrol", "Question",
+						"<<", "Shortcut", "Start"
 					});
+//				"Status", "State\nAUTO", "State\nDOWN",
+//				"command?action=R&p1=0&p2=0", "command?action=s&p1=1&p2=0", "command?action=s&p1=0&p2=0",
 				PanelsCommands = new Dictionary<Screen, string[]> ();
 				PanelsCommands.Add (Screen.Main,
-					new string[] {"", "", "",
-						"", "", "",
-						"", "", "",
+					new string[] {"command?action=S&p1=0&p2=0", "command?action=S&p1=0&p2=1", "command?action=S&p1=0&p2=2",
+						"command?action=A&p1=0&p2=74", "command?action=A&p1=0&p2=71", "command?action=A&p1=0&p2=72",
+						"command?action=A&p1=0&p2=73", "", "",
 						"", "", ">>",
 						"", "", "",
 						"", "", "",
@@ -118,14 +120,14 @@ namespace R2B0app
 					});
 				PanelsCommands.Add (Screen.Sound,
 					new string[] {
-						"sound?type=alarm", "sound?type=happy", "sound?type=humour",
-						"sound?type=misc", "sound?type=ooh", "sound?type=other",
-						"sound?type=proc", "sound?type=razz", "sound?type=scream", 
-						"sound?type=sentinel", "sound?type=whistle", ">>",
-						"status", "state?mode=autonomous", "state?mode=shutdown",
-						"", "", "",
-						"", "", "",
-						"<<", "", ""
+						"command?action=A&p1=0&p2=0", "command?action=A&p1=0&p2=1", "command?action=A&p1=0&p2=2",
+						"command?action=A&p1=0&p2=3", "command?action=A&p1=0&p2=4", "command?action=A&p1=0&p2=5",
+						"command?action=A&p1=0&p2=6", "command?action=A&p1=0&p2=7", "command?action=A&p1=0&p2=8", 
+						"command?action=A&p1=0&p2=100", "command?action=A&p1=0&p2=150", ">>",
+						"command?action=A&p1=0&p2=20", "command?action=A&p1=0&p2=30", "command?action=A&p1=0&p2=40",
+						"command?action=A&p1=0&p2=50", "command?action=A&p1=0&p2=60", "command?action=A&p1=0&p2=140",
+						"command?action=A&p1=0&p2=160", "command?action=A&p1=0&p2=170", "command?action=A&p1=0&p2=200",
+						"<<", "command?action=A&p1=0&p2=70", "command?action=A&p1=0&p2=180"
 					});
 
                 //CrossVibrate.Current;

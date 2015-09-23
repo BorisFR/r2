@@ -9,60 +9,64 @@ namespace R2B0app
 	{
 		public static ForBinding ForBinding;
 
-		private static Dictionary<string, string> devicesName = new Dictionary<string, string>();
+		private static Dictionary<string, string> devicesName = new Dictionary<string, string> ();
 		public static string CurrentDevice;
 
 		public static MainPage MainPage { get; set; }
+
 		public static DetailPage DetailPage;
 
-		private static MenuManager menus = new MenuManager();
+		private static MenuManager menus = new MenuManager ();
+
 		public static MenuManager MenuManager { get { return menus; } }
 
 
 		private static bool isInit = false;
-		private static object toLock = new object();
+		private static object toLock = new object ();
 
 
 		public static void DoInit ()
 		{
-			if (isInit) return;
-            lock (toLock)
-            {
-                menus.Refresh();
-                devicesName.Add("ip4s", "iPhone 4S");
-                devicesName.Add("ip5", "iPhone 5");
-                devicesName.Add("ip5s", "iPhone 5s");
-                devicesName.Add("ip6", "iPhone 6");
-                devicesName.Add("ip6p", "iPhone 6+");
-                devicesName.Add("ipad2", "iPad 2");
-                devicesName.Add("ipadair", "iPad Air");
-                devicesName.Add("ipadhd", "iPad Retina");
-                devicesName.Add("android", "Android");
-				devicesName.Add("androidwsvga", "Android");
-				devicesName.Add("androidhdr", "Android");
-                devicesName.Add("wp", "Windows Phone");
-                devicesName.Add("wpwvga", "Windows Phone");
-                devicesName.Add("wpwxga", "Windows Phone");
-                devicesName.Add("wphdr", "Windows Phone");
-                devicesName.Add("wpfhd", "Windows Phone");
-                devicesName.Add("win", "Windows");
-                switch (CrossDeviceInfo.Current.Platform)
-                {
-                    case DeviceInfo.Plugin.Abstractions.Platform.Android:
-                        CurrentDevice = "android";
-                        break;
-                    case DeviceInfo.Plugin.Abstractions.Platform.WindowsPhone:
-                        CurrentDevice = "wp";
-                        break;
-                    case DeviceInfo.Plugin.Abstractions.Platform.Windows:
-                        CurrentDevice = "win";
-                        break;
-                    case DeviceInfo.Plugin.Abstractions.Platform.iOS:
-                        CurrentDevice = "ip4s";
-                        break;
-                    default:
-                        break;
-                }
+			if (isInit)
+				return;
+			lock (toLock) {
+				menus.Refresh ();
+				devicesName.Add ("ip4s", "iPhone 4S");
+				devicesName.Add ("ip5", "iPhone 5");
+				devicesName.Add ("ip5s", "iPhone 5s");
+				devicesName.Add ("ip6", "iPhone 6");
+				devicesName.Add ("ip6s", "iPhone 6s");
+				devicesName.Add ("ip6p", "iPhone 6+");
+				devicesName.Add ("ip6sp", "iPhone 6s+");
+				devicesName.Add ("ipad2", "iPad 2");
+				devicesName.Add ("ipadair", "iPad Air");
+				devicesName.Add ("ipadair2", "iPad Air 2");
+				devicesName.Add ("ipadhd", "iPad Retina");
+				devicesName.Add ("android", "Android");
+				devicesName.Add ("androidwsvga", "Android");
+				devicesName.Add ("androidhdr", "Android");
+				devicesName.Add ("wp", "Windows Phone");
+				devicesName.Add ("wpwvga", "Windows Phone");
+				devicesName.Add ("wpwxga", "Windows Phone");
+				devicesName.Add ("wphdr", "Windows Phone");
+				devicesName.Add ("wpfhd", "Windows Phone");
+				devicesName.Add ("win", "Windows");
+				switch (CrossDeviceInfo.Current.Platform) {
+				case DeviceInfo.Plugin.Abstractions.Platform.Android:
+					CurrentDevice = "android";
+					break;
+				case DeviceInfo.Plugin.Abstractions.Platform.WindowsPhone:
+					CurrentDevice = "wp";
+					break;
+				case DeviceInfo.Plugin.Abstractions.Platform.Windows:
+					CurrentDevice = "win";
+					break;
+				case DeviceInfo.Plugin.Abstractions.Platform.iOS:
+					CurrentDevice = "ip4s";
+					break;
+				default:
+					break;
+				}
 				Settings.DoInit ();
 				ForBinding = new ForBinding ();
 				Communication.Init ();
@@ -70,8 +74,8 @@ namespace R2B0app
 				Communication.Received += Communication_Received;
 				Communication.ReceivedError += Communication_ReceivedError;
 				Device.StartTimer (new TimeSpan (0, 0, 1), TimerSecond);
-                isInit = true;
-            }
+				isInit = true;
+			}
 		}
 
 		static void Communication_ReceivedError (string value)
@@ -97,7 +101,7 @@ namespace R2B0app
 			lastStatusAsk = DateTime.Now;
 			statusInProgress = false;
 			// TODO: parse value to extract statuses
-			string[] result = value.Split('@');
+			string[] result = value.Split ('@');
 			foreach (string s in result) {
 				string[] values = s.Split ('=');
 				switch (values [0]) {
@@ -120,9 +124,10 @@ namespace R2B0app
 		}
 
 		private static DateTime now;
-		private static Random rnd = new Random(DateTime.Now.Millisecond);
+		private static Random rnd = new Random (DateTime.Now.Millisecond);
 
-		private static bool TimerSecond() {
+		private static bool TimerSecond ()
+		{
 			now = DateTime.Now;
 			ForBinding.Now = now;
 			ForBinding.Hour = now.Hour;
@@ -131,15 +136,16 @@ namespace R2B0app
 			if (!statusInProgress) {
 				if ((now - lastStatusAsk).TotalSeconds > 59) {
 					statusInProgress = true;
-					Communication.SendCommand ("/status");
+					Communication.SendCommand ("command?action=R&p1=0&p2=0");
 				}
 			}
 			ForBinding.AnimateIcons ();
 			return true;
 		}
 
-		public static void RefreshDevice() {
-			System.Diagnostics.Debug.WriteLine (App.ScreenWidth.ToString () + "x" + App.ScreenHeight.ToString());
+		public static void RefreshDevice ()
+		{
+			System.Diagnostics.Debug.WriteLine (App.ScreenWidth.ToString () + "x" + App.ScreenHeight.ToString ());
 			switch (CrossDeviceInfo.Current.Platform) {
 			case DeviceInfo.Plugin.Abstractions.Platform.Android:
 				if ((App.ScreenWidth == 1024 && App.ScreenHeight == 552) || (App.ScreenWidth == 471 && App.ScreenHeight == 552))
@@ -158,11 +164,11 @@ namespace R2B0app
 				else if ((App.ScreenWidth == 320 && App.ScreenHeight == 568) || (App.ScreenWidth == 568 && App.ScreenHeight == 320))
 					CurrentDevice = "ip5"; // or 5s...
 				else if ((App.ScreenWidth == 375 && App.ScreenHeight == 667) || (App.ScreenWidth == 667 && App.ScreenHeight == 375))
-					CurrentDevice = "ip6";
+					CurrentDevice = "ip6"; // or 6s
 				else if ((App.ScreenWidth == 414 && App.ScreenHeight == 736) || (App.ScreenWidth == 736 && App.ScreenHeight == 414))
-					CurrentDevice = "ip6p";
+					CurrentDevice = "ip6p"; // or 6s+
 				else if ((App.ScreenWidth == 768 && App.ScreenHeight == 1024) || (App.ScreenWidth == 1024 && App.ScreenHeight == 768))
-					CurrentDevice = "ipad2"; // or Retina or Air
+					CurrentDevice = "ipad2"; // or Retina or Air or Air 2
 				else {
 					System.Diagnostics.Debug.WriteLine (string.Format ("iOS {0}x{1}", App.ScreenWidth, App.ScreenHeight));
 				}
@@ -179,7 +185,7 @@ namespace R2B0app
 				break;
 			case DeviceInfo.Plugin.Abstractions.Platform.Windows:
 				CurrentDevice = "win";
-				 {
+				{
 					System.Diagnostics.Debug.WriteLine (string.Format ("Win {0}x{1}", App.ScreenWidth, App.ScreenHeight));
 				}
 				break;
@@ -188,7 +194,8 @@ namespace R2B0app
 			}
 		}
 
-		public static void GotoPage(MyPage newPage) {
+		public static void GotoPage (MyPage newPage)
+		{
 			switch (newPage) {
 			case MyPage.About:
 				//DetailPage.SetContent (new AboutView ());
@@ -198,11 +205,11 @@ namespace R2B0app
 				MainPage.Detail = new PageSettings ();
 				break;
 			case MyPage.Main:
+			case MyPage.Holos:
 				if (!Global.MainPage.Detail.GetType ().Equals (typeof(DetailPage)))
 					Global.MainPage.Detail = Global.DetailPage;
 				DetailPage.ChangeContent (newPage);
 				break;
-			case MyPage.Holos:
 			case MyPage.Logics:
 			case MyPage.Panels:
 				if (!Global.MainPage.Detail.GetType ().Equals (typeof(DetailPage)))

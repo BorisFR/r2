@@ -52,8 +52,9 @@ namespace R2B0app
 				viewRight.Content = new ViewMain(Screen.Main);
 				break;
 			case MyPage.Holos:
-				viewLeft.Content = new ViewDome(Screen.Holos);
-				viewRight.Content = new ViewMain(Screen.Holos);
+				viewLeft.Content = new ViewR2 ();
+//				viewLeft.Content = new ViewDome(Screen.Holos);
+				viewRight.Content = new ViewMain(Screen.Sound);
 				break;
 			case MyPage.Logics:
 				viewLeft.Content = new ViewDome(Screen.Logics);
